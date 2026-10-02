@@ -1040,7 +1040,7 @@
       mc.href = 'mailto:' + email;
       mc.textContent = email;
     }
-    if (typeof cartaData !== 'undefined' && cartaData) renderCartaTabs();
+    if (typeof cartaData !== 'undefined' && cartaData) { renderCartaTabs(); renderCartaPanel(); }
   }
 
   const langSwitch = document.getElementById('langSwitch');
@@ -1052,12 +1052,16 @@
   document.addEventListener('click', (e) => { if (!langSwitch.contains(e.target)) langSwitch.classList.remove('open'); });
 
   /* ================= CARTA (live menu from Comandator) ================= */
-  // Only Comandator sections named "Carta - <section>" are shown; the rest are shop catalogue.
+  // Comandator sections named "Carta - <section>" are shown, plus the ones listed in CARTA_EXTRA_SECTIONS;
+  // the rest are shop catalogue.
   const CARTA_URL = 'https://comandator.com/trpc/establishmentsRouter.getEstablishmentBySlug?input=' +
     encodeURIComponent(JSON.stringify({slugName:'capricho-de-costa-del-silencio-tenerife-arona', language:'es'}));
   const CARTA_PREFIX = /^\s*carta\s*-\s*/i;
+  const CARTA_EXTRA_SECTIONS = {'REFRESCOS Y AGUA': 'Refrescos y agua', 'VINO TINTO': 'Vino tinto'};
   const CATEGORY_EN = {
     'Productos Ibericos': 'Ibérico products',
+    'Refrescos y agua': 'Soft drinks and water',
+    'Vino tinto': 'Red wine',
     'Productos en mesa': 'Table products',
     'Platos elaborados con conservas': 'Dishes made with preserves',
     'Conservas Cambados': 'Cambados preserves',
@@ -1076,11 +1080,100 @@
     'Vino blanco seco': 'Dry white wine',
   };
 
+  // English names for menu items and descriptions, keyed by the Spanish text in Comandator
+  // (matched ignoring case, accents, extra spaces and POS codes). Untranslated items show in Spanish.
+  const ITEM_EN = {
+    "Coca - cola original": "Coca-Cola Original",
+    "Cocacola 0": "Coca-Cola Zero",
+    "fanta": "Fanta Orange",
+    "Sprite": "Sprite",
+    "Nestea Mango piña": "Nestea Mango & Pineapple",
+    "Acuarius limon": "Aquarius Lemon",
+    "Fanta limon": "Fanta Lemon",
+    "Agua con gas": "Sparkling water",
+    "Agua Natural": "Still water",
+    "Vino Blanco Carramimbre Blanco": "Carramimbre white wine",
+    "Vino O Luar do Sil – Godello 75 cl": "O Luar do Sil – Godello white wine 75 cl",
+    "Hermanos lurton seco": "Hermanos Lurton dry white wine",
+    "1 racion queso de mezcla": "Mixed cheese, full portion",
+    "1/2 racion queso de mezcla": "Mixed cheese, half portion",
+    "Racion Jamon100%": "100% Ibérico ham, full portion",
+    "1/2 jamon 100%": "100% Ibérico ham, half portion",
+    "Ración cebo de campo": "Cebo de campo Ibérico ham, full portion",
+    "1/2 jamón ibérico cebo": "Cebo Ibérico ham, half portion",
+    "Racion de pata asada": "Roast pork leg, full portion",
+    "1/2 racion pata asada": "Roast pork leg, half portion",
+    "Tabla mixta": "Mixed board",
+    "Tabla de ibericos": "Ibérico board",
+    "Tosta de ibericos": "Ibérico toast",
+    "Tostada con Jamon": "Toast with ham",
+    "Tostada queso Curado": "Toast with cured cheese",
+    "Arbejas": "Stewed peas",
+    "Carrilleras de Ternera Guisadas": "Braised beef cheeks",
+    "Pimientos Rellenos de Bonito": "Peppers stuffed with bonito tuna",
+    "Bonito a la Sidra": "Bonito tuna in cider",
+    "Fabada Asturiana": "Asturian bean stew (fabada)",
+    "Agujas de las rias baixas": "Garfish from the Rías Baixas",
+    "Berberechos": "Cockles",
+    "Boquerones del cantabrico": "Cantabrian anchovies",
+    "Chipirones aove": "Baby squid in extra virgin olive oil",
+    "Chipirones en su tinta": "Baby squid in their own ink",
+    "Navajas alnatural": "Razor clams, natural",
+    "Zamburiñas en salsa gallega edición limitada": "Queen scallops in Galician sauce, limited edition",
+    "Zamburiñas en salsa gallega": "Queen scallops in Galician sauce",
+    "Pulpo en aceite de oliva": "Octopus in olive oil",
+    "Berberechos rias baixas": "Cockles from the Rías Baixas",
+    "Ventresca": "Tuna belly (ventresca)",
+    "Huevas de merluza": "Hake roe",
+    "Ventresca aove": "Tuna belly in extra virgin olive oil",
+    "Zamburiñas en salsa": "Queen scallops in sauce",
+    "sardinillas aove": "Small sardines in extra virgin olive oil",
+    "mejillones en escabeche": "Mussels in escabeche",
+    "Berberechos grandes": "Large cockles",
+    "Anchoas lata pequeña": "Anchovies, small tin",
+    "Anchoas premium": "Premium anchovies",
+    "Jamón 100% Sobre": "100% Ibérico ham, sliced pack",
+    "Jamón 50% cebo de campo Sobre": "50% Ibérico cebo de campo ham, sliced pack",
+    "Presa iberica 80gr": "Ibérico presa 80 g",
+    "Lomo iberico 80gr": "Ibérico loin 80 g",
+    "Salchichon bellota": "Bellota salchichón",
+    "Lomo iberico cebo": "Cebo Ibérico loin",
+    "Chorizo iberico": "Ibérico chorizo",
+    "Papas Lolita - Original": "Lolita crisps – Original",
+    "Aceitunas lets go": "Let's Go olives",
+    "Picos": "Picos (Spanish breadsticks)",
+    "Pan con aceite de la sierra de cazorla": "Bread with Sierra de Cazorla olive oil",
+    "Vino Blanco Afrutado Chasnero": "Chasnero fruity white wine",
+    "Vino Tinto Pago de los capellanes Roble": "Pago de los Capellanes Roble red wine",
+    "Vino carramimbre": "Carramimbre red wine",
+    "Capellanes Crianza gran reserva": "Capellanes Crianza Gran Reserva red wine",
+    "Pago carraovejas": "Pago de Carraovejas red wine",
+  };
+  const DESC_EN = {
+    "tabla conbinada productos ibericos y quesos": "Combined board of Ibérico products and cheeses",
+    "jamon iberico, chorizo, salchichon, morcon": "Ibérico ham, chorizo, salchichón and morcón",
+  };
+  function menuKey(text){
+    return text.replace(/^\d{3}\s+(-\s*)?/, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/\s+/g, ' ').trim();
+  }
+  function keyedBy(dict){
+    const out = {};
+    Object.keys(dict).forEach(k => { out[menuKey(k)] = dict[k]; });
+    return out;
+  }
+  const ITEM_EN_KEYED = keyedBy(ITEM_EN);
+  const DESC_EN_KEYED = keyedBy(DESC_EN);
+  const CATEGORY_EN_KEYED = keyedBy(CATEGORY_EN);
+  function translateMenu(text, keyed){
+    return currentLang === 'en' ? (keyed[menuKey(text)] || text) : text;
+  }
+
   let cartaData = null;
   let cartaCat = 0;
 
   function cleanItemName(name){
-    const stripped = name.replace(/^\d{3}\s*-?\s*/, '').trim();  // drop POS codes like "041 "
+    const stripped = name.replace(/^\d{3}\s+(-\s*)?/, '').trim();  // drop POS codes like "041 "
     return stripped.charAt(0).toUpperCase() + stripped.slice(1);
   }
   function formatPrice(p){
@@ -1094,7 +1187,7 @@
     cartaData.forEach((cat, i) => {
       const b = document.createElement('button');
       b.className = 'menu-tab' + (i === cartaCat ? ' active' : '');
-      b.textContent = currentLang === 'en' ? (CATEGORY_EN[cat.category] || cat.category) : cat.category;
+      b.textContent = translateMenu(cat.category, CATEGORY_EN_KEYED);
       b.addEventListener('click', () => { cartaCat = i; renderCartaTabs(); renderCartaPanel(); });
       tabsEl.appendChild(b);
     });
@@ -1110,11 +1203,11 @@
       row.className = 'menu-item';
       const nameEl = document.createElement('div');
       nameEl.className = 'mi-name';
-      nameEl.textContent = cleanItemName(item.name);
+      nameEl.textContent = cleanItemName(translateMenu(item.name, ITEM_EN_KEYED));
       if (item.description) {
         const descEl = document.createElement('div');
         descEl.className = 'mi-desc';
-        descEl.textContent = item.description;
+        descEl.textContent = translateMenu(item.description, DESC_EN_KEYED);
         nameEl.appendChild(descEl);
       }
       const priceEl = document.createElement('div');
@@ -1133,10 +1226,11 @@
       const data = await res.json();
       const sections = data.result.data.menus.filter(m => !m.disabled).flatMap(m => m.sections);
       cartaData = sections
-        .filter(sec => !sec.disabled && !sec.isForAdmins && CARTA_PREFIX.test(sec.name))
+        .filter(sec => !sec.disabled && !sec.isForAdmins &&
+          (CARTA_PREFIX.test(sec.name) || CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()]))
         .sort((a, b) => a.sortOrder - b.sortOrder)
         .map(sec => ({
-          category: sec.name.replace(CARTA_PREFIX, '').trim(),
+          category: CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()] || sec.name.replace(CARTA_PREFIX, '').trim(),
           items: sec.items
             .filter(i => i.status === 'active')
             .sort((a, b) => a.sortOrder - b.sortOrder)
