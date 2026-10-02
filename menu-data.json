@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-02T16:02:46.761Z",
+ "updatedAt": "2026-10-02T21:27:38.545Z",
  "sections": [
   {
    "name": "REFRESCOS Y AGUA",
@@ -130,7 +130,7 @@
     },
     {
      "name": "1/2 jamon 100%",
-     "price": 13.5,
+     "price": 16.5,
      "description": "",
      "status": "active",
      "sortOrder": 3
@@ -144,7 +144,7 @@
     },
     {
      "name": "1/2 jamón ibérico cebo",
-     "price": 6.8,
+     "price": 8.5,
      "description": "",
      "status": "active",
      "sortOrder": 5
@@ -1317,42 +1317,42 @@
    "items": [
     {
      "name": "Copa vino blanco afrutado canario",
-     "price": 3.9,
+     "price": 4.5,
      "description": "",
      "status": "active",
      "sortOrder": 0
     },
     {
      "name": "Copa tinto rioja",
-     "price": 3.9,
+     "price": 4.5,
      "description": "",
      "status": "active",
      "sortOrder": 1
     },
     {
      "name": "Copa vino blanco seco",
-     "price": 3.9,
+     "price": 4.5,
      "description": "",
      "status": "active",
      "sortOrder": 2
     },
     {
-     "name": "Copa tinto rivera",
-     "price": 3.9,
+     "name": "Copa tinto ribera",
+     "price": 4.5,
      "description": "",
      "status": "active",
      "sortOrder": 3
     },
     {
      "name": "Copa de vermouth blanco",
-     "price": 4.1,
+     "price": 4.8,
      "description": "",
      "status": "active",
      "sortOrder": 4
     },
     {
      "name": "Copa de vermouth rojo",
-     "price": 4.1,
+     "price": 4.8,
      "description": "",
      "status": "active",
      "sortOrder": 5
