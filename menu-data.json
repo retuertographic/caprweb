@@ -1,0 +1,1421 @@
+{
+ "updatedAt": "2026-10-02T16:02:46.761Z",
+ "sections": [
+  {
+   "name": "REFRESCOS Y AGUA",
+   "sortOrder": 0,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Coca - cola original",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Cocacola 0",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "fanta",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Sprite",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Nestea Mango piña",
+     "price": 2.2,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Acuarius limon",
+     "price": 2.2,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Fanta limon",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Agua con gas",
+     "price": 1.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 11
+    },
+    {
+     "name": "Agua Natural",
+     "price": 2.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 12
+    }
+   ]
+  },
+  {
+   "name": "Carta - Vino blanco seco",
+   "sortOrder": 1,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Vino Blanco Carramimbre Blanco",
+     "price": 12.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Vino O Luar do Sil – Godello 75 cl",
+     "price": 19.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Hermanos lurton seco",
+     "price": 22.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    }
+   ]
+  },
+  {
+   "name": "Carta - Productos Ibericos",
+   "sortOrder": 2,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "1 racion queso de mezcla",
+     "price": 9.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "1/2 racion queso de mezcla",
+     "price": 5.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Racion  Jamon100%",
+     "price": 22.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "1/2 jamon 100%",
+     "price": 13.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Ración cebo de campo",
+     "price": 12.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "1/2 jamón ibérico cebo",
+     "price": 6.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Racion de pata asada",
+     "price": 11.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "1/2 racion pata asada",
+     "price": 6.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Tabla mixta",
+     "price": 14.6,
+     "description": "tabla conbinada productos ibericos y quesos",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Tabla de ibericos",
+     "price": 12.5,
+     "description": "jamon iberico, chorizo, salchichon, morcon",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "018 Tosta de ibericos",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 11
+    },
+    {
+     "name": "021 Tostada con Jamon",
+     "price": 2.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 12
+    },
+    {
+     "name": "Tostada queso Curado",
+     "price": 2.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 13
+    }
+   ]
+  },
+  {
+   "name": "Carta - Platos elaborados con conservas",
+   "sortOrder": 3,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Arbejas",
+     "price": 8.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Carrilleras de Ternera Guisadas",
+     "price": 12.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Pimientos Rellenos de Bonito",
+     "price": 9.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Bonito a la Sidra",
+     "price": 12.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Fabada Asturiana",
+     "price": 9.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "PLATOS ELABORADOS CON CONSERVAS",
+   "sortOrder": 4,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Arbejas",
+     "price": 8.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Carrilleras de Ternera Guisadas",
+     "price": 13.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 23
+    },
+    {
+     "name": "Pimientos Rellenos de Bonito",
+     "price": 7.15,
+     "description": "",
+     "status": "active",
+     "sortOrder": 25
+    },
+    {
+     "name": "Bonito a la Sidra",
+     "price": 10.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 26
+    },
+    {
+     "name": "Fabada Asturiana",
+     "price": 8.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 28
+    }
+   ]
+  },
+  {
+   "name": "MONTADITOS",
+   "sortOrder": 5,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Montaditos",
+     "price": 3.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    }
+   ]
+  },
+  {
+   "name": "PRODUCTOS CANARIOS",
+   "sortOrder": 6,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Pack de mermelada de Higo y crema Guayaba",
+     "price": 3.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Mermelada de HIGO",
+     "price": 3.2,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Mermelada de higo : El masapé La gomera 1987",
+     "price": 3.2,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Salsa : mojo Picón (salsa picante )",
+     "price": 4.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Mojo palmero con almendras",
+     "price": 3.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "ALMOGROTE",
+     "price": 6.38,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Pack de 3 mojos",
+     "price": 7.96,
+     "description": "( mojo rojo , almogrote , mojo cilantro )",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Salsa : mojo suave (salsa suave )",
+     "price": 2.56,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Salsa : mojo verde  (salsa con cilantro )",
+     "price": 2.56,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Galletas gomeras",
+     "price": 6.24,
+     "description": "",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "Mojo palmero casero",
+     "price": 6.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 10
+    }
+   ]
+  },
+  {
+   "name": "Carta - Conservas Cambados",
+   "sortOrder": 7,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "041 Agujas de las rias baixas",
+     "price": 7,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "042 Berberechos",
+     "price": 12.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "043 Boquerones del cantabrico",
+     "price": 12.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "044 Chipirones aove",
+     "price": 10.42,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "045 Chipirones en su tinta",
+     "price": 11.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "046 Navajas alnatural",
+     "price": 11.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "047 Zamburiñas en salsa gallega edición limitada",
+     "price": 10.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "048 Zamburiñas en salsa gallega",
+     "price": 6.7,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "049 Pulpo en aceite de oliva",
+     "price": 8.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "050 Berberechos rias baixas",
+     "price": 16.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 10
+    },
+    {
+     "name": "051 Ventresca",
+     "price": 12.12,
+     "description": "",
+     "status": "active",
+     "sortOrder": 11
+    },
+    {
+     "name": "052 Huevas de merluza",
+     "price": 7.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 12
+    }
+   ]
+  },
+  {
+   "name": "Carta - Conservas Real Conservera",
+   "sortOrder": 8,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Ventresca aove",
+     "price": 10.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Zamburiñas en salsa",
+     "price": 9.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "064 sardinillas aove",
+     "price": 10.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "065 mejillones en escabeche",
+     "price": 12.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "066 Berberechos grandes",
+     "price": 27.96,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "Carta - Anchoas",
+   "sortOrder": 9,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Anchoas lata pequeña",
+     "price": 7.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Anchoas premium",
+     "price": 18.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    }
+   ]
+  },
+  {
+   "name": "Carta - Loncheados",
+   "sortOrder": 10,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Jamón 100% Sobre",
+     "price": 18.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Jamón 50% cebo de campo Sobre",
+     "price": 13.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "082 Presa iberica 80gr",
+     "price": 8.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "083 Lomo iberico 80gr",
+     "price": 8.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "084 Salchichon bellota",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "086 Lomo iberico cebo",
+     "price": 6.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "087 Chorizo iberico",
+     "price": 3.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    }
+   ]
+  },
+  {
+   "name": "Carta - Snacks",
+   "sortOrder": 11,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Papas Lolita - Original",
+     "price": 2.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Aceitunas lets go",
+     "price": 1.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Picos",
+     "price": 1.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Pan con aceite de la sierra de cazorla",
+     "price": 2.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    }
+   ]
+  },
+  {
+   "name": "ACEITES",
+   "sortOrder": 12,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Aceitera cazorla",
+     "price": 18.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Aceite cazorla 750",
+     "price": 10.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Aceite de cazorla 500",
+     "price": 7.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    }
+   ]
+  },
+  {
+   "name": "Carta - Vino blanco afrutado",
+   "sortOrder": 13,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Vino Blanco Afrutado Chasnero",
+     "price": 15.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    }
+   ]
+  },
+  {
+   "name": "ANCHOAS",
+   "sortOrder": 14,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "anchoas lata pequeña",
+     "price": 7.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "anchoas premium",
+     "price": 18.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Anchoas mantequilla",
+     "price": 9.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    }
+   ]
+  },
+  {
+   "name": "CAVAS Y CHAMPAN",
+   "sortOrder": 15,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Cava perelada brut",
+     "price": 12.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Cava pedrelara brut rose",
+     "price": 11.42,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Cava Gran Gesta Reserva Especial",
+     "price": 14.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "MOET CHANDON",
+     "price": 65.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    }
+   ]
+  },
+  {
+   "name": "CERVEZAS Y SIDRAS",
+   "sortOrder": 16,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Cerveza 1906 reserva 20cl",
+     "price": 1.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Cerveza dorada limon 0.5",
+     "price": 1.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Sidra ladron de manzanas",
+     "price": 1.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Cerveza paulaner",
+     "price": 3.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "La choufe verlga",
+     "price": 3.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Estrella Galicia",
+     "price": 1.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Combinados con alcohol",
+     "price": 7.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    }
+   ]
+  },
+  {
+   "name": "CONSERVAS CAMBADOS",
+   "sortOrder": 17,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Berberechos",
+     "price": 12.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Boquerones del cantabrico",
+     "price": 12.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Agujas de las rias baixas",
+     "price": 7,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Chipirones aove",
+     "price": 10.42,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Chipirones en su tinta",
+     "price": 11.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Navajas alnatural",
+     "price": 14.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Zamburiñas en salsa gallega edición limitada",
+     "price": 10.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Zamburiñas en salsa gallega",
+     "price": 6.7,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Pulpo en aceite de oliva",
+     "price": 9.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Berberechos  rias baixas",
+     "price": 16.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "Ventresca",
+     "price": 12.12,
+     "description": "",
+     "status": "active",
+     "sortOrder": 10
+    },
+    {
+     "name": "Huevas de merluza",
+     "price": 7.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 11
+    },
+    {
+     "name": "Pulpo a la gallega",
+     "price": 11.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 12
+    }
+   ]
+  },
+  {
+   "name": "CONSERVAS REAL CONSERVERA",
+   "sortOrder": 18,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "ventresca aove",
+     "price": 10.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "zamburiñas en salsa",
+     "price": 8.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "navajas 7/10",
+     "price": 25.2,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "sardinillas aove",
+     "price": 10.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "mejillones en escabeche",
+     "price": 12.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Berberechos grandes",
+     "price": 27.96,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    }
+   ]
+  },
+  {
+   "name": "CHOCOLATES Y BOMBONES",
+   "sortOrder": 19,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Caramelos gardiners",
+     "price": 16.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Caramelos flores",
+     "price": 15.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Chocolatina al wiski",
+     "price": 4.35,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Bombones pralibel",
+     "price": 24.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Chocolate velga bliss",
+     "price": 21.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Caramelos mariposas",
+     "price": 16.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Chocolates lava canarias",
+     "price": 8.75,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    }
+   ]
+  },
+  {
+   "name": " JAMONES Y EMBUTIDOS POR PIEZAS",
+   "sortOrder": 20,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Morcon 100% 5 jotas",
+     "price": 64.3,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Presa media caña 5 jotas",
+     "price": 49.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Lomo media caña 5 jotas",
+     "price": 49.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Jabuguitos",
+     "price": 5.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Sanchez Romero Carvajal 100%",
+     "price": 585.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Celta Gallego 100%",
+     "price": 455.4,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Servicio de corte y envasado al vacio",
+     "price": 78.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    }
+   ]
+  },
+  {
+   "name": "LONCHEADOS",
+   "sortOrder": 21,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Jamon 100% 80gr",
+     "price": 15.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Presa iberica 80gr",
+     "price": 8.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Lomo iberico 80gr",
+     "price": 8.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Salchichon bellota",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Morcon iberico",
+     "price": 7.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Lomo iberico cebo",
+     "price": 6.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
+    },
+    {
+     "name": "Chorizo iberico",
+     "price": 3.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Jamon 50% cebo",
+     "price": 7.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Jamon 50% cebo de campo",
+     "price": 11.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "Jamon 100% 100gr",
+     "price": 20.95,
+     "description": "",
+     "status": "active",
+     "sortOrder": 10
+    }
+   ]
+  },
+  {
+   "name": "QUESOS",
+   "sortOrder": 22,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Cuña de queso",
+     "price": 6.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Cuña de queso mezcla vaca,cabra y oveja",
+     "price": 7.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Cuña oveja premium",
+     "price": 9.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Cuña queso cabra semi",
+     "price": 7.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "SNACKS ",
+   "sortOrder": 23,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Papas Lolita - Original",
+     "price": 2.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "TORREZNOS.  400gr",
+     "price": 4.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Aceitunas chupadedos",
+     "price": 4.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Aceitunas lets go",
+     "price": 1.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "VERMU",
+   "sortOrder": 25,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Peregrino blanco",
+     "price": 14.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Peregrino rojo",
+     "price": 14.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    }
+   ]
+  },
+  {
+   "name": "VINO BLANCO AFRUTADO",
+   "sortOrder": 26,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Vino Blanco  Afrutado  tajinaste tenerife",
+     "price": 15.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Locartas blanco afrutado",
+     "price": 12.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Flor de chasna afrutado",
+     "price": 13.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Copa vino blanco afrutado",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "VINO BLANCO SECO",
+   "sortOrder": 27,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Vino Blanco Carramimbre Blanco",
+     "price": 19.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Vino O Luar do Sil –  Capellanes blanco",
+     "price": 29.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Hermanos lurton blanco rueda",
+     "price": 16.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Alvariño ofillo da condesa",
+     "price": 14.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "VINO POR COPAS Y VERMUTS POR COPAS",
+   "sortOrder": 28,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Copa vino blanco afrutado canario",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Copa tinto rioja",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Copa vino blanco seco",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    },
+    {
+     "name": "Copa tinto rivera",
+     "price": 3.9,
+     "description": "",
+     "status": "active",
+     "sortOrder": 3
+    },
+    {
+     "name": "Copa de vermouth blanco",
+     "price": 4.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Copa de vermouth rojo",
+     "price": 4.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    }
+   ]
+  },
+  {
+   "name": "VINO TINTO",
+   "sortOrder": 29,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Vino Tinto Pago de los capellanes Roble",
+     "price": 28.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Vino carramimbre",
+     "price": 22.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "Capellanes Crianza gran reserva",
+     "price": 49.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Pago carraovejas",
+     "price": 56.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 11
+    }
+   ]
+  },
+  {
+   "name": "SMOOTHIES Y CAFE",
+   "sortOrder": 30,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Smoothies- batidos de fruta",
+     "price": 4.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Cafe",
+     "price": 1.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
+    }
+   ]
+  }
+ ]
+}

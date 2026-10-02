@@ -1210,24 +1210,50 @@
     });
   }
 
+  // Backup copy of the menu, refreshed from Comandator by .github/workflows/update-menu.yml.
+  const CARTA_BACKUP_URL = 'menu-data.json';
+
+  async function fetchJson(url, timeoutMs){
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {signal: ctrl.signal});
+      if (!res.ok) throw new Error('bad response');
+      return await res.json();
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  // Live from Comandator first; if that fails, the backup copy published with the site.
+  async function fetchCartaSections(){
+    try {
+      const data = await fetchJson(CARTA_URL, 8000);
+      const sections = data.result.data.menus.filter(m => !m.disabled).flatMap(m => m.sections);
+      const carta = buildCarta(sections);
+      if (carta.length) return carta;
+    } catch (err) {}
+    return buildCarta((await fetchJson(CARTA_BACKUP_URL, 8000)).sections);
+  }
+
+  function buildCarta(sections){
+    return sections
+      .filter(sec => !sec.disabled && !sec.isForAdmins &&
+        (CARTA_PREFIX.test(sec.name) || CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()]))
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+      .map(sec => ({
+        category: CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()] || sec.name.replace(CARTA_PREFIX, '').trim(),
+        items: sec.items
+          .filter(i => i.status === 'active')
+          .sort((a, b) => a.sortOrder - b.sortOrder)
+          .map(i => ({name: i.name.replace(/\s+/g, ' '), price: i.price, description: (i.description || '').trim()})),
+      }))
+      .filter(cat => cat.items.length);
+  }
+
   async function loadCarta(){
     try {
-      const res = await fetch(CARTA_URL);
-      if (!res.ok) throw new Error('bad response');
-      const data = await res.json();
-      const sections = data.result.data.menus.filter(m => !m.disabled).flatMap(m => m.sections);
-      cartaData = sections
-        .filter(sec => !sec.disabled && !sec.isForAdmins &&
-          (CARTA_PREFIX.test(sec.name) || CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()]))
-        .sort((a, b) => a.sortOrder - b.sortOrder)
-        .map(sec => ({
-          category: CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()] || sec.name.replace(CARTA_PREFIX, '').trim(),
-          items: sec.items
-            .filter(i => i.status === 'active')
-            .sort((a, b) => a.sortOrder - b.sortOrder)
-            .map(i => ({name: i.name.replace(/\s+/g, ' '), price: i.price, description: (i.description || '').trim()})),
-        }))
-        .filter(cat => cat.items.length);
+      cartaData = await fetchCartaSections();
       if (!cartaData.length) throw new Error('empty menu');
       cartaCat = 0;
       renderCartaTabs();
