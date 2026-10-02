@@ -275,6 +275,7 @@
   .menu-item{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px dashed rgba(20,25,43,.15);}
   .menu-item:last-child{border-bottom:none;}
   .menu-item .mi-name{font-weight:600;color:var(--ink);font-size:.95rem;}
+  .menu-item .mi-desc{font-weight:400;color:var(--text-soft);font-size:.82rem;margin-top:4px;}
   .menu-item .mi-price{font-weight:800;color:var(--gold);white-space:nowrap;font-size:.95rem;}
   .menu-loading{color:rgba(255,255,255,.55);font-size:.9rem;padding:20px 0;}
   .menu-foot{text-align:center;margin-top:30px;}
@@ -655,7 +656,7 @@
     <div class="menu-tabs" id="cartaTabs"><div class="menu-loading" data-i18n="carta_loading">Cargando la carta…</div></div>
     <div class="menu-panel" id="cartaPanel"></div>
     <div class="menu-foot">
-      <a href="https://menu.elcaprichodecostadelsilencio.com" target="_blank" rel="noopener" data-i18n="carta_full_link">Ver la carta completa online →</a>
+      <a href="https://www.comandator.com/es/establecimiento/capricho-de-costa-del-silencio-tenerife-arona/menu" target="_blank" rel="noopener" data-i18n="carta_full_link">Ver la carta completa online →</a>
     </div>
   </div>
 </section>
@@ -1050,9 +1051,13 @@
   });
   document.addEventListener('click', (e) => { if (!langSwitch.contains(e.target)) langSwitch.classList.remove('open'); });
 
-  /* ================= CARTA (live menu, synced via GitHub) ================= */
-  const CARTA_URL = 'https://menu.elcaprichodecostadelsilencio.com/menu-data.json';
+  /* ================= CARTA (live menu from Comandator) ================= */
+  // Only Comandator sections named "Carta - <section>" are shown; the rest are shop catalogue.
+  const CARTA_URL = 'https://comandator.com/trpc/establishmentsRouter.getEstablishmentBySlug?input=' +
+    encodeURIComponent(JSON.stringify({slugName:'capricho-de-costa-del-silencio-tenerife-arona', language:'es'}));
+  const CARTA_PREFIX = /^\s*carta\s*-\s*/i;
   const CATEGORY_EN = {
+    'Productos Ibericos': 'Ibérico products',
     'Productos en mesa': 'Table products',
     'Platos elaborados con conservas': 'Dishes made with preserves',
     'Conservas Cambados': 'Cambados preserves',
@@ -1075,11 +1080,11 @@
   let cartaCat = 0;
 
   function cleanItemName(name){
-    const stripped = name.replace(/^\d+\s*-?\s*/, '').trim();
+    const stripped = name.replace(/^\d{3}\s*-?\s*/, '').trim();  // drop POS codes like "041 "
     return stripped.charAt(0).toUpperCase() + stripped.slice(1);
   }
   function formatPrice(p){
-    return p.replace('.', ',') + ' €';
+    return Number(p).toFixed(2).replace('.', ',') + ' €';
   }
 
   function renderCartaTabs(){
@@ -1106,6 +1111,12 @@
       const nameEl = document.createElement('div');
       nameEl.className = 'mi-name';
       nameEl.textContent = cleanItemName(item.name);
+      if (item.description) {
+        const descEl = document.createElement('div');
+        descEl.className = 'mi-desc';
+        descEl.textContent = item.description;
+        nameEl.appendChild(descEl);
+      }
       const priceEl = document.createElement('div');
       priceEl.className = 'mi-price';
       priceEl.textContent = formatPrice(item.price);
@@ -1120,7 +1131,20 @@
       const res = await fetch(CARTA_URL);
       if (!res.ok) throw new Error('bad response');
       const data = await res.json();
-      cartaData = data.categories;
+      const sections = data.result.data.menus.filter(m => !m.disabled).flatMap(m => m.sections);
+      cartaData = sections
+        .filter(sec => !sec.disabled && !sec.isForAdmins && CARTA_PREFIX.test(sec.name))
+        .sort((a, b) => a.sortOrder - b.sortOrder)
+        .map(sec => ({
+          category: sec.name.replace(CARTA_PREFIX, '').trim(),
+          items: sec.items
+            .filter(i => i.status === 'active')
+            .sort((a, b) => a.sortOrder - b.sortOrder)
+            .map(i => ({name: i.name.replace(/\s+/g, ' '), price: i.price, description: (i.description || '').trim()})),
+        }))
+        .filter(cat => cat.items.length);
+      if (!cartaData.length) throw new Error('empty menu');
+      cartaCat = 0;
       renderCartaTabs();
       renderCartaPanel();
     } catch (err) {
