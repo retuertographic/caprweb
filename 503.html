@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Servicio no disponible · El Capricho de Costa del Silencio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314192B'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-size='54' fill='%23C9A227' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  /* Self-contained on purpose: this page must render even when the rest of the site can't load. */
+  :root{
+    --ink:#14192B;
+    --ink-2:#0C1020;
+    --gold:#C9A227;
+    --gold-light:#E3C468;
+    --cream:#F7F1E4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:'Poppins',Arial,sans-serif;
+    color:#fff;
+    background:radial-gradient(ellipse at top right, #232a44 0%, var(--ink) 45%, var(--ink-2) 100%);
+    display:flex;align-items:center;justify-content:center;
+    padding:32px 20px;
+    text-align:center;
+  }
+  a{text-decoration:none;color:inherit;}
+  main{max-width:560px;width:100%;}
+  .badge{
+    width:96px;height:96px;margin:0 auto 34px;
+    background:var(--cream);border-radius:50%;padding:9px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(201,162,39,.4);
+  }
+  .badge img{width:100%;height:100%;object-fit:contain;}
+  .code{
+    font-family:'Playfair Display',Georgia,serif;font-weight:900;
+    font-size:clamp(5rem,20vw,8.5rem);line-height:1;
+    color:var(--gold);letter-spacing:.02em;
+    text-shadow:0 12px 40px rgba(201,162,39,.25);
+  }
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;font-weight:700;
+    color:var(--gold-light);margin:18px 0 6px;
+  }
+  h1{
+    font-family:'Playfair Display',Georgia,serif;font-weight:800;
+    font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;
+  }
+  h1 .accent{
+    display:block;font-family:'Alex Brush',cursive;font-weight:400;
+    color:var(--gold-light);font-size:1.25em;margin-top:4px;
+  }
+  p{color:rgba(255,255,255,.72);line-height:1.75;margin:20px auto 34px;max-width:440px;font-size:.98rem;}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .btn{
+    display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;border:2px solid transparent;
+    padding:14px 32px;border-radius:40px;letter-spacing:.02em;font-size:.95rem;
+    box-shadow:0 10px 24px rgba(201,162,39,.35);
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(201,162,39,.45);background:var(--gold-light);}
+  .btn.outline{background:transparent;border:2px solid var(--gold);color:var(--gold);box-shadow:none;}
+  .btn.outline:hover{background:var(--gold);color:var(--ink);}
+  .foot{margin-top:46px;font-size:.78rem;color:rgba(255,255,255,.45);letter-spacing:.04em;}
+  @media (max-width:480px){ .btn{width:100%;} }
+</style>
+</head>
+<body>
+<main>
+  <a href="/" class="badge" aria-label="El Capricho de Costa del Silencio">
+    <img src="/img/logo-hero.png" alt="El Capricho de Costa del Silencio" onerror="this.parentNode.style.display='none'">
+  </a>
+  <div class="code">503</div>
+  <div class="eyebrow" data-t="eyebrow">Servicio no disponible</div>
+  <h1><span data-t="title1">Volvemos</span><span class="accent" data-t="title2">en un momento</span></h1>
+  <p data-t="text">La web no está disponible temporalmente. Inténtalo de nuevo en unos minutos. Si lo necesitas, llámanos o escríbenos por WhatsApp.</p>
+  <div class="actions">
+    <a href="javascript:location.reload()" class="btn" data-t="retry">Reintentar</a>
+    <a href="tel:+34623972847" class="btn outline" data-t="call">Llamar</a>
+    <a href="https://wa.me/34623972847" class="btn outline" data-t="whatsapp">WhatsApp</a>
+  </div>
+  <div class="foot">El Capricho de Costa del Silencio · Tenerife</div>
+</main>
+<script>
+  (function(){
+    var T = {"es": {"eyebrow": "Servicio no disponible", "title1": "Volvemos", "title2": "en un momento", "text": "La web no está disponible temporalmente. Inténtalo de nuevo en unos minutos. Si lo necesitas, llámanos o escríbenos por WhatsApp.", "retry": "Reintentar", "call": "Llamar", "whatsapp": "WhatsApp"}, "en": {"eyebrow": "Service unavailable", "title1": "We'll be back", "title2": "in a moment", "text": "The website is temporarily unavailable. Please try again in a few minutes. If you need us, call or message us on WhatsApp.", "retry": "Try again", "call": "Call us", "whatsapp": "WhatsApp"}};
+    var lang = 'es';
+    try { lang = localStorage.getItem('capricho_lang') || ''; } catch (e) {}
+    if (!T[lang]) lang = (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-t]').forEach(function(el){
+      var v = T[lang][el.getAttribute('data-t')];
+      if (v) el.textContent = v;
+    });
+    document.title = T[lang].eyebrow + ' · El Capricho de Costa del Silencio';
+  })();
+</script>
+</body>
+</html>
