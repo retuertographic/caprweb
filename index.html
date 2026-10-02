@@ -21,7 +21,7 @@
     --text-soft:#5c5644;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}  /* keeps the off-canvas mobile menu from widening the page */
   body{
     font-family:'Poppins',sans-serif;
     color:var(--ink);
@@ -313,7 +313,7 @@
   .contact{background:var(--paper);padding:120px 0 100px;}
   .contact-head{text-align:center;max-width:640px;margin:0 auto 56px;}
   .contact-head .eyebrow{justify-content:center;display:flex;}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:start;}
   .quick-actions{display:flex;flex-direction:column;gap:14px;margin-bottom:34px;}
   .quick-actions .btn{width:100%;text-align:center;}
   .info-list{display:flex;flex-direction:column;gap:20px;margin-bottom:28px;}
@@ -353,42 +353,15 @@
   .more-contacts .mc-title{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a7f68;margin-bottom:10px;}
   .more-contacts ul{display:flex;flex-direction:column;gap:6px;}
   .more-contacts li{font-size:.85rem;color:var(--text-soft);display:flex;gap:6px;flex-wrap:wrap;}
-  .more-contacts a{color:var(--ink);font-weight:600;}
+  .more-contacts a{color:var(--ink);font-weight:600;overflow-wrap:anywhere;}
   .more-contacts a:hover{color:var(--gold);}
 
-  .form-captcha{
-    background:rgba(201,162,39,.08);border:1px dashed rgba(201,162,39,.4);
-    border-radius:12px;padding:14px 16px;margin-bottom:16px;
-  }
-  .form-captcha label{color:var(--gold-light)!important;}
-  .captcha-msg{font-size:.78rem;margin-top:6px;display:none;}
-  .captcha-msg.show{display:block;}
-  .captcha-msg.err{color:#ff9d9d;}
-  .captcha-msg.ok{color:#8fd99f;}
-  .form-status{
-    display:none;align-items:flex-start;gap:10px;margin-top:14px;padding:12px 14px;
-    border-radius:12px;font-size:.85rem;line-height:1.55;
-  }
-  .form-status.show{display:flex;}
-  .form-status.sending{background:rgba(255,255,255,.06);color:rgba(255,255,255,.75);}
-  .form-status.success{background:rgba(143,217,159,.12);color:#c9f0d1;border:1px solid rgba(143,217,159,.3);}
-  .form-status.error{background:rgba(255,157,157,.12);color:#ffd1d1;border:1px solid rgba(255,157,157,.3);}
-  .form-status a{color:inherit;font-weight:700;text-decoration:underline;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
-  .form-card label{display:block;font-size:.78rem;font-weight:600;margin-bottom:6px;color:rgba(255,255,255,.75);}
-  .form-card input, .form-card textarea{
-    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
-    border-radius:10px;padding:11px 14px;color:#fff;font-family:'Poppins',sans-serif;font-size:.9rem;
-  }
-  .form-card input::placeholder, .form-card textarea::placeholder{color:rgba(255,255,255,.35);}
-  .form-card textarea{resize:vertical;min-height:90px;margin-bottom:18px;}
-  .form-card .full{margin-bottom:14px;}
-  .form-card input.invalid, .form-card textarea.invalid{border-color:#ff9d9d;background:rgba(255,157,157,.08);}
-  .field-error{display:none;color:#ff9d9d;font-size:.76rem;margin-top:5px;line-height:1.4;}
-  .field-error.show{display:block;}
+  .crm-form{margin:0 -16px;}  /* the CRM form has 16px of inner padding */ 
+  .crm-frame{display:block;width:100%;height:880px;border:0;background:transparent;color-scheme:normal;}
   .map-box{border-radius:18px;overflow:hidden;min-height:280px;background:var(--cream-2);position:relative;margin-top:8px;}
   .map-box iframe{width:100%;height:100%;min-height:280px;display:block;border:0;}
-  @media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:50px;} .form-row{grid-template-columns:1fr;}}
+  @media (max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr);gap:50px;}}
+  @media (max-width:600px){.form-card{padding:26px 18px;}}
 
   footer{background:var(--ink);border-top:1px solid rgba(201,162,39,.15);padding:30px 0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
@@ -755,95 +728,17 @@
         <div class="form-panel active" id="panelReserve">
           <h3 data-i18n="form_title">Solicita tu reserva</h3>
           <p class="note" data-i18n="form_note">Esto es una solicitud de reserva: la confirmaremos por email o teléfono a la mayor brevedad posible. Si prefieres respuesta inmediata, mejor llama o escribe por WhatsApp.</p>
-          <form id="reserveForm" novalidate>
-            <div class="form-row">
-              <div>
-                <label data-i18n="form_name">Nombre</label>
-                <input type="text" id="r_name" maxlength="80" required>
-                <div class="field-error" id="r_name_err"></div>
-              </div>
-              <div>
-                <label data-i18n="form_email">Email</label>
-                <input type="email" id="r_email" maxlength="100" required>
-                <div class="field-error" id="r_email_err"></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div>
-                <label data-i18n="form_phone">Teléfono</label>
-                <input type="tel" id="r_phone" inputmode="numeric" pattern="[0-9]{6,15}" maxlength="15" data-i18n-placeholder="form_phone_ph" placeholder="Ej: 600123456" required>
-                <div class="field-error" id="r_phone_err"></div>
-              </div>
-              <div>
-                <label data-i18n="form_people">Personas</label>
-                <input type="number" id="r_people" min="1" max="20" required>
-                <div class="field-error" id="r_people_err"></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div>
-                <label data-i18n="form_date">Fecha</label>
-                <input type="date" id="r_date" required>
-                <div class="field-error" id="r_date_err"></div>
-              </div>
-              <div>
-                <label data-i18n="form_time">Hora</label>
-                <input type="time" id="r_time" required>
-                <div class="field-error" id="r_time_err"></div>
-              </div>
-            </div>
-            <div class="full">
-              <label data-i18n="form_message">Mensaje (opcional)</label>
-              <textarea id="r_message" maxlength="500" data-i18n-placeholder="form_message_ph" placeholder="Alguna preferencia o alergia que debamos saber"></textarea>
-            </div>
-            <div class="form-captcha">
-              <label data-i18n="captcha_label">🧠 Para confirmar que eres humano: ¿qué producto estrella ofrecemos y empieza por J?</label>
-              <input type="text" id="r_captcha" data-i18n-placeholder="captcha_placeholder" placeholder="Tu respuesta" required autocomplete="off">
-              <div class="captcha-msg err" id="r_captcha_msg" data-i18n="captcha_error">Respuesta incorrecta, inténtalo de nuevo.</div>
-            </div>
-            <button type="submit" class="btn" style="width:100%;" data-i18n="form_submit">Enviar solicitud de reserva</button>
-            <div class="form-status" id="r_status"></div>
-          </form>
+          <div class="crm-form">
+            <iframe class="crm-frame" data-form="reserve" title="Formulario de reserva de cata" scrolling="no" loading="lazy"></iframe>
+          </div>
         </div>
 
         <div class="form-panel" id="panelOrder">
           <h3 data-i18n="order_title">Solicita tu pedido</h3>
           <p class="note" data-i18n="order_note">Esto es una solicitud de pedido: te confirmaremos disponibilidad y forma de entrega por email o teléfono a la mayor brevedad posible.</p>
-          <form id="orderForm" novalidate>
-            <div class="form-row">
-              <div>
-                <label data-i18n="form_name">Nombre</label>
-                <input type="text" id="o_name" maxlength="80" required>
-                <div class="field-error" id="o_name_err"></div>
-              </div>
-              <div>
-                <label data-i18n="form_email">Email</label>
-                <input type="email" id="o_email" maxlength="100" required>
-                <div class="field-error" id="o_email_err"></div>
-              </div>
-            </div>
-            <div class="full">
-              <label data-i18n="form_phone">Teléfono</label>
-              <input type="tel" id="o_phone" inputmode="numeric" pattern="[0-9]{6,15}" maxlength="15" data-i18n-placeholder="form_phone_ph" placeholder="Ej: 600123456" required>
-              <div class="field-error" id="o_phone_err"></div>
-            </div>
-            <div class="full">
-              <label data-i18n="order_products">¿Qué te gustaría pedir?</label>
-              <textarea id="o_products" maxlength="500" data-i18n-placeholder="order_products_ph" placeholder="Ej: jamón ibérico 1 kg, una tabla de quesos, dos botellas de vino..." required></textarea>
-              <div class="field-error" id="o_products_err"></div>
-            </div>
-            <div class="full">
-              <label data-i18n="form_message">Mensaje (opcional)</label>
-              <textarea id="o_message" maxlength="500" data-i18n-placeholder="order_message_ph" placeholder="Fecha de recogida, envío, alergias..."></textarea>
-            </div>
-            <div class="form-captcha">
-              <label data-i18n="captcha_label">🧠 Para confirmar que eres humano: ¿qué producto estrella ofrecemos y empieza por J?</label>
-              <input type="text" id="o_captcha" data-i18n-placeholder="captcha_placeholder" placeholder="Tu respuesta" required autocomplete="off">
-              <div class="captcha-msg err" id="o_captcha_msg" data-i18n="captcha_error">Respuesta incorrecta, inténtalo de nuevo.</div>
-            </div>
-            <button type="submit" class="btn" style="width:100%;" data-i18n="order_submit">Enviar solicitud de pedido</button>
-            <div class="form-status" id="o_status"></div>
-          </form>
+          <div class="crm-form">
+            <iframe class="crm-frame" data-form="order" title="Formulario de pedido de tienda" scrolling="no" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -932,7 +827,6 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -997,7 +891,7 @@
 
   /* ================= I18N ================= */
   const FLAGS = {es:'🇪🇸', en:'🇬🇧'};
-  const I18N = {"es": {"nav_home": "Inicio", "nav_about": "Nosotros", "nav_selection": "Selección", "nav_gallery": "Galería", "nav_contact": "Contacto", "nav_book": "Reserva tu cata", "hero_tag": "🍷 Gourmet · Catas · Tienda", "hero_title1": "El jamón no lleva prisa", "hero_title2": "El sabor de lo auténtico", "hero_p": "Jamón ibérico de curación real, quesos, conservas y vinos escogidos con calma — en un espacio pensado para catar despacio, no para tener prisa.", "hero_btn2": "Ver selección", "hero_scroll": "Scroll", "badge_pet": "🐾 Pet friendly", "badge_wifi": "📶 Wifi gratuito", "badge_aforo": "🪑 Aforo reducido", "intro_eyebrow": "No somos un restaurante", "intro_title1": "Una tienda", "intro_title2": "para paladares curiosos", "intro_p1": "El Capricho de Costa del Silencio es una tienda gourmet con catas y degustaciones: jamón ibérico, quesos del mundo, conservas y vinos escogidos con calma y criterio.", "intro_p2": "Aforo reducido y reservas necesarias, para que cada mesa tenga el tiempo y la atención que merece.", "intro_point1": "Catas y degustaciones guiadas", "intro_point2": "Selección curada de producto ibérico", "intro_point3": "Pet friendly y wifi gratuito", "intro_point4": "Reserva en unos minutos", "intro_months": "meses de curación real", "sel_eyebrow": "Nuestra selección", "sel_title1": "Para catar", "sel_title2": "y para llevar", "sel1_title": "Jamón Ibérico", "sel1_p": "36 meses de curación, 50% raza ibérica. Cortado al momento, por piezas o en tabla para compartir.", "sel2_title": "Quesos del Mundo", "sel2_p": "De cremosos a intensos — una selección pensada para todos los paladares, con producto canario incluido.", "sel3_title": "Conservas Gallegas", "sel3_p": "Berberechos, zamburiñas y navajas — el mar, directo de las Rías Baixas.", "sel4_title": "Vino y Aceite", "sel4_p": "Ribera, Rioja y vinos canarios, junto a aceites de sierra para maridar sin prisa.", "sel5_title": "Vermú y Aperitivo", "sel5_p": "El clásico español de toda la vida, bien hecho, con unas aceitunas y buena compañía.", "sel6_title": "Chocolates y Regalos", "sel6_p": "Chocolate belga, dulces canarios y detalles gourmet — el regalo que sí dice algo.", "gallery_eyebrow": "Un vistazo", "gallery_title1": "La tienda", "gallery_title2": "en imágenes", "contact_eyebrow": "Reserva tu cata", "contact_title1": "Te esperamos", "contact_title2": "cuando quieras", "contact_p": "Aforo reducido, así que mejor avisar antes. Llama, escribe por WhatsApp o rellena el formulario.", "cta_call": "📞 Llamar ahora", "cta_whatsapp": "💬 Escribir por WhatsApp", "info_address_label": "Dirección", "info_directions": "Cómo llegar →", "info_phone_label": "Teléfono", "info_hours_label": "Horario", "day_mon": "Lunes", "day_tue": "Martes", "day_wed": "Miércoles", "day_thu": "Jueves", "day_fri": "Viernes", "day_sat": "Sábado", "day_sun": "Domingo", "closed": "Cerrado", "form_title": "Solicita tu reserva", "form_note": "Esto es una solicitud de reserva: la confirmaremos por email o teléfono a la mayor brevedad posible. Si prefieres respuesta inmediata, mejor llama o escribe por WhatsApp.", "form_name": "Nombre", "form_people": "Personas", "form_date": "Fecha", "form_time": "Hora", "form_message": "Mensaje (opcional)", "form_message_ph": "Alguna preferencia o alergia que debamos saber", "form_submit": "Enviar solicitud de reserva", "tab_reserve": "Reservar cata", "tab_order": "Pedido de tienda", "order_title": "Solicita tu pedido", "order_note": "Esto es una solicitud de pedido: te confirmaremos disponibilidad y forma de entrega por email o teléfono a la mayor brevedad posible.", "order_contact": "Email o teléfono", "order_products": "¿Qué te gustaría pedir?", "order_products_ph": "Ej: jamón ibérico 1 kg, una tabla de quesos, dos botellas de vino...", "order_message_ph": "Fecha de recogida, envío, alergias...", "order_submit": "Enviar solicitud de pedido", "mc_title": "Otros contactos", "mc_service": "Atención al cliente:", "mc_business": "Empresas y proveedores:", "mc_privacy": "Protección de datos:", "footer_legal": "Aviso legal", "footer_privacy": "Política de privacidad", "footer_cookies": "Política de cookies", "legal_modal_title": "Información legal", "aviso_p1": "En cumplimiento del deber de información del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), se informa de que el titular de este sitio web es Jonathan Álvarez Abreu, NIF 54047787H, con domicilio en Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife.", "aviso_p2": "El Capricho de Costa del Silencio no asume responsabilidad derivada de la falta de veracidad, integridad, actualización o precisión de los datos e informaciones contenidos en estas páginas.", "aviso_p3": "Los textos, imágenes, logotipo y demás contenidos de este sitio son propiedad de El Capricho de Costa del Silencio o de sus licenciantes. Queda prohibida su reproducción, distribución o comunicación pública sin consentimiento expreso.", "aviso_p4": "Para acceder a algunos servicios (reserva de catas, pedidos de tienda) deberás facilitar datos personales, tratados conforme al Reglamento (UE) 2016/679 (RGPD). Puedes ejercer tus derechos escribiendo a protecciondedatos@elcaprichodecostadelsilencio.com o en la dirección indicada arriba.", "priv_h1": "Protección de datos según el RGPD", "priv_p1": "Los datos personales que recogemos a través de los formularios de este sitio web (reserva de cata y pedidos de tienda) se incorporan a los ficheros de Jonathan Álvarez Abreu, responsable de El Capricho de Costa del Silencio.", "priv_h2": "¿Con qué finalidad tratamos tus datos?", "priv_l1": "Gestionar tu reserva de cata o degustación.", "priv_l2": "Gestionar tu pedido de productos de la tienda.", "priv_l3": "Responder a tus consultas de atención al cliente.", "priv_l4": "Enviarte información comercial, solo si nos has dado tu consentimiento expreso.", "priv_h3": "¿Por cuánto tiempo los conservamos?", "priv_p2": "Mientras exista una relación comercial contigo o hasta que solicites su supresión, y durante el plazo en que pudieran derivarse responsabilidades legales.", "priv_h4": "Legitimación y destinatarios", "priv_p3": "El tratamiento se basa en tu solicitud de información o reserva, y en tu consentimiento expreso cuando corresponda. Tus datos no se ceden a terceros ajenos a El Capricho de Costa del Silencio, salvo obligación legal.", "priv_h5": "Tus derechos", "priv_p4": "Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, cancelación, oposición, limitación y portabilidad escribiendo a protecciondedatos@elcaprichodecostadelsilencio.com o en Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife. También puedes oponerte al envío de comunicaciones comerciales en cualquier momento, por el mismo medio.", "priv_h6": "Propiedad intelectual", "priv_p5": "Todos los contenidos de este sitio (textos, imágenes, logotipo) son propiedad de El Capricho de Costa del Silencio o de sus licenciantes y están protegidos por la normativa de propiedad intelectual. Queda prohibido su uso no autorizado.", "cook_h1": "¿Qué son las cookies?", "cook_p1": "Las cookies son archivos que se descargan en tu equipo al visitar una página web y permiten almacenar y recuperar información sobre tus hábitos de navegación.", "cook_h2": "Cookies que utilizamos", "cook_p2": "Este sitio usa cookies técnicas necesarias para su funcionamiento (por ejemplo, para recordar tu idioma preferido) y puede cargar contenido de terceros, como el mapa de Google Maps incrustado, que puede instalar sus propias cookies conforme a la política de privacidad de Google.", "cook_h3": "Tipos de cookies", "cook_l1": "Cookies propias: gestionadas directamente por El Capricho de Costa del Silencio (p. ej., para recordar tu idioma).", "cook_l2": "Cookies de terceros: instaladas por servicios externos incrustados en la web (p. ej., Google Maps).", "cook_l3": "Cookies técnicas: necesarias para la navegación y el funcionamiento básico del sitio.", "cook_l4": "Cookies de personalización: recuerdan tus preferencias, como el idioma.", "cook_h4": "Cómo gestionar las cookies", "cook_p3": "Puedes permitir, bloquear o eliminar las cookies desde la configuración de tu navegador (Chrome, Firefox, Safari, Edge, Opera). Bloquear algunas cookies puede afectar al funcionamiento del sitio.", "cook_h5": "Consentimiento", "cook_p4": "Al continuar navegando por El Capricho de Costa del Silencio, aceptas el uso de estas cookies según lo descrito en esta política. Puedes cambiar tu decisión en cualquier momento eliminando las cookies desde tu navegador.", "nav_carta": "Carta", "carta_title": "Nuestra carta", "carta_loading": "Cargando la carta…", "carta_error": "No se pudo cargar la carta en este momento. Inténtalo de nuevo más tarde.", "captcha_label": "🧠 Para confirmar que eres humano: ¿qué producto estrella ofrecemos y empieza por J?", "captcha_placeholder": "Tu respuesta", "captcha_error": "Respuesta incorrecta, inténtalo de nuevo.", "status_sending": "Enviando tu solicitud…", "status_success": "Tu solicitud se ha enviado correctamente. Te responderemos lo antes posible.", "status_error_intro": "No hemos podido enviar tu solicitud. Puedes:", "status_error_call": "Llamarnos", "status_error_whatsapp": "Escribirnos por WhatsApp", "status_error_email": "Escribirnos directamente a", "email_subject_reserve": "Nueva reserva de cata", "email_subject_order": "Nuevo pedido de tienda", "form_email": "Email", "form_phone": "Teléfono", "form_phone_ph": "Ej: 600123456", "err_required": "Este campo es obligatorio.", "err_email": "Introduce un email válido (ej: nombre@dominio.com).", "err_phone": "El teléfono solo puede contener números (6 a 15 dígitos)."}, "en": {"nav_home": "Home", "nav_about": "About", "nav_selection": "Selection", "nav_gallery": "Gallery", "nav_contact": "Contact", "nav_book": "Book your tasting", "hero_tag": "🍷 Gourmet · Tastings · Shop", "hero_title1": "Ham like this doesn't rush", "hero_title2": "The taste of the authentic", "hero_p": "Real Ibérico curing, cheeses, preserves and carefully chosen wines — a place made for tasting slowly, not rushing through.", "hero_btn2": "View selection", "hero_scroll": "Scroll", "badge_pet": "🐾 Pet friendly", "badge_wifi": "📶 Free wifi", "badge_aforo": "🪑 Limited seating", "intro_eyebrow": "We're not a restaurant", "intro_title1": "A shop", "intro_title2": "for curious palates", "intro_p1": "El Capricho de Costa del Silencio is a gourmet shop with tastings: Ibérico ham, cheeses from around the world, preserves and wines chosen with care and criteria.", "intro_p2": "Limited seating and reservations required, so every table gets the time and attention it deserves.", "intro_point1": "Guided tastings", "intro_point2": "A curated selection of Ibérico product", "intro_point3": "Pet friendly and free wifi", "intro_point4": "Book in a couple of minutes", "intro_months": "months of real curing", "sel_eyebrow": "Our selection", "sel_title1": "To taste", "sel_title2": "and to take home", "sel1_title": "Ibérico Ham", "sel1_p": "36 months of curing, 50% Ibérico breed. Sliced fresh, by the piece or on a board to share.", "sel2_title": "Cheeses of the World", "sel2_p": "From creamy to bold — a selection for every palate, Canarian product included.", "sel3_title": "Galician Preserves", "sel3_p": "Cockles, scallops and razor clams — the sea, straight from the Rías Baixas.", "sel4_title": "Wine and Oil", "sel4_p": "Ribera, Rioja and Canarian wines, alongside olive oils from the sierra to pair without rushing.", "sel5_title": "Vermouth and Aperitivo", "sel5_p": "The classic Spanish aperitivo, done right, with a few olives and good company.", "sel6_title": "Chocolates and Gifts", "sel6_p": "Belgian chocolate, Canarian sweets and gourmet treats — the gift that actually says something.", "gallery_eyebrow": "A glimpse", "gallery_title1": "The shop", "gallery_title2": "in pictures", "contact_eyebrow": "Book your tasting", "contact_title1": "We're waiting", "contact_title2": "whenever you like", "contact_p": "Seating is limited, so it's best to let us know in advance. Call, message us on WhatsApp, or fill in the form.", "cta_call": "📞 Call now", "cta_whatsapp": "💬 Message on WhatsApp", "info_address_label": "Address", "info_directions": "Get directions →", "info_phone_label": "Phone", "info_hours_label": "Opening hours", "day_mon": "Monday", "day_tue": "Tuesday", "day_wed": "Wednesday", "day_thu": "Thursday", "day_fri": "Friday", "day_sat": "Saturday", "day_sun": "Sunday", "closed": "Closed", "form_title": "Request your reservation", "form_note": "This is a reservation request: we will confirm it by email or phone as soon as possible. For an immediate reply, it's best to call or message on WhatsApp.", "form_name": "Name", "form_people": "Guests", "form_date": "Date", "form_time": "Time", "form_message": "Message (optional)", "form_message_ph": "Any preference or allergy we should know about", "form_submit": "Send reservation request", "tab_reserve": "Book a tasting", "tab_order": "Shop order", "order_title": "Request your order", "order_note": "This is an order request: we will confirm availability and delivery by email or phone as soon as possible.", "order_contact": "Email or phone", "order_products": "What would you like to order?", "order_products_ph": "E.g. 1 kg Ibérico ham, one cheese board, two bottles of wine...", "order_message_ph": "Pickup date, shipping, allergies...", "order_submit": "Send order request", "mc_title": "Other contacts", "mc_service": "Customer care:", "mc_business": "Business and suppliers:", "mc_privacy": "Data protection:", "footer_legal": "Legal notice", "footer_privacy": "Privacy policy", "footer_cookies": "Cookie policy", "legal_modal_title": "Legal information", "aviso_p1": "In compliance with the duty of information under Article 10 of Spanish Law 34/2002 on Information Society and E-commerce Services (LSSICE), this website is owned by Jonathan Álvarez Abreu, Tax ID (NIF) 54047787H, address at Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife, Spain.", "aviso_p2": "El Capricho de Costa del Silencio accepts no liability arising from a lack of accuracy, completeness, timeliness or precision of the data or information contained on these pages.", "aviso_p3": "The text, images, logo and other content on this site are the property of El Capricho de Costa del Silencio or its licensors. Reproduction, distribution or public communication without express consent is prohibited.", "aviso_p4": "To access certain services (tasting reservations, shop orders) you will need to provide personal data, processed in accordance with Regulation (EU) 2016/679 (GDPR). You can exercise your rights by writing to protecciondedatos@elcaprichodecostadelsilencio.com or at the address above.", "priv_h1": "Data protection under the GDPR", "priv_p1": "Personal data collected through this website's forms (tasting reservations and shop orders) is included in the files of Jonathan Álvarez Abreu, the party responsible for El Capricho de Costa del Silencio.", "priv_h2": "What do we use your data for?", "priv_l1": "Managing your tasting or degustation reservation.", "priv_l2": "Managing your shop order.", "priv_l3": "Responding to your customer service enquiries.", "priv_l4": "Sending you commercial information, only if you have given your express consent.", "priv_h3": "How long do we keep it?", "priv_p2": "For as long as our business relationship continues or until you request its deletion, and for the period during which legal liabilities could arise.", "priv_h4": "Legal basis and recipients", "priv_p3": "Processing is based on your request for information or booking, and on your express consent where applicable. Your data is not shared with third parties outside El Capricho de Costa del Silencio, except where legally required.", "priv_h5": "Your rights", "priv_p4": "You can exercise your rights of access, rectification, erasure, objection, restriction and portability at any time by writing to protecciondedatos@elcaprichodecostadelsilencio.com or at Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife, Spain. You can also object to receiving commercial communications at any time, through the same channel.", "priv_h6": "Intellectual property", "priv_p5": "All content on this site (text, images, logo) is the property of El Capricho de Costa del Silencio or its licensors and is protected under intellectual property law. Unauthorised use is prohibited.", "cook_h1": "What are cookies?", "cook_p1": "Cookies are files downloaded to your device when you visit a website, allowing information about your browsing habits to be stored and retrieved.", "cook_h2": "Cookies we use", "cook_p2": "This site uses technical cookies necessary for it to work (for example, to remember your preferred language) and may load third-party content, such as the embedded Google Maps, which may set its own cookies under Google's privacy policy.", "cook_h3": "Types of cookies", "cook_l1": "First-party cookies: managed directly by El Capricho de Costa del Silencio (e.g. to remember your language).", "cook_l2": "Third-party cookies: set by external services embedded on the site (e.g. Google Maps).", "cook_l3": "Technical cookies: necessary for browsing and the site's basic operation.", "cook_l4": "Personalisation cookies: remember your preferences, such as language.", "cook_h4": "Managing cookies", "cook_p3": "You can allow, block or delete cookies through your browser settings (Chrome, Firefox, Safari, Edge, Opera). Blocking some cookies may affect how the site works.", "cook_h5": "Consent", "cook_p4": "By continuing to browse El Capricho de Costa del Silencio, you accept the use of these cookies as described in this policy. You can change your decision at any time by deleting cookies from your browser.", "nav_carta": "Menu", "carta_title": "Our menu", "carta_loading": "Loading the menu…", "carta_error": "The menu could not be loaded right now. Please try again later.", "captcha_label": "🧠 Just to confirm you are human: what star product do we offer? (Hint: in Spanish it starts with J)", "captcha_placeholder": "Your answer", "captcha_error": "That is not quite right, please try again.", "status_sending": "Sending your request…", "status_success": "Your request has been sent successfully. We will get back to you as soon as possible.", "status_error_intro": "We could not send your request. You can:", "status_error_call": "Call us", "status_error_whatsapp": "Message us on WhatsApp", "status_error_email": "Email us directly at", "email_subject_reserve": "New tasting reservation", "email_subject_order": "New shop order", "form_email": "Email", "form_phone": "Phone", "form_phone_ph": "E.g. 600123456", "err_required": "This field is required.", "err_email": "Enter a valid email (e.g. name@domain.com).", "err_phone": "Phone can only contain numbers (6 to 15 digits)."}};
+  const I18N = {"es": {"nav_home": "Inicio", "nav_about": "Nosotros", "nav_selection": "Selección", "nav_gallery": "Galería", "nav_contact": "Contacto", "nav_book": "Reserva tu cata", "hero_tag": "🍷 Gourmet · Catas · Tienda", "hero_title1": "El jamón no lleva prisa", "hero_title2": "El sabor de lo auténtico", "hero_p": "Jamón ibérico de curación real, quesos, conservas y vinos escogidos con calma — en un espacio pensado para catar despacio, no para tener prisa.", "hero_btn2": "Ver selección", "hero_scroll": "Scroll", "badge_pet": "🐾 Pet friendly", "badge_wifi": "📶 Wifi gratuito", "badge_aforo": "🪑 Aforo reducido", "intro_eyebrow": "No somos un restaurante", "intro_title1": "Una tienda", "intro_title2": "para paladares curiosos", "intro_p1": "El Capricho de Costa del Silencio es una tienda gourmet con catas y degustaciones: jamón ibérico, quesos del mundo, conservas y vinos escogidos con calma y criterio.", "intro_p2": "Aforo reducido y reservas necesarias, para que cada mesa tenga el tiempo y la atención que merece.", "intro_point1": "Catas y degustaciones guiadas", "intro_point2": "Selección curada de producto ibérico", "intro_point3": "Pet friendly y wifi gratuito", "intro_point4": "Reserva en unos minutos", "intro_months": "meses de curación real", "sel_eyebrow": "Nuestra selección", "sel_title1": "Para catar", "sel_title2": "y para llevar", "sel1_title": "Jamón Ibérico", "sel1_p": "36 meses de curación, 50% raza ibérica. Cortado al momento, por piezas o en tabla para compartir.", "sel2_title": "Quesos del Mundo", "sel2_p": "De cremosos a intensos — una selección pensada para todos los paladares, con producto canario incluido.", "sel3_title": "Conservas Gallegas", "sel3_p": "Berberechos, zamburiñas y navajas — el mar, directo de las Rías Baixas.", "sel4_title": "Vino y Aceite", "sel4_p": "Ribera, Rioja y vinos canarios, junto a aceites de sierra para maridar sin prisa.", "sel5_title": "Vermú y Aperitivo", "sel5_p": "El clásico español de toda la vida, bien hecho, con unas aceitunas y buena compañía.", "sel6_title": "Chocolates y Regalos", "sel6_p": "Chocolate belga, dulces canarios y detalles gourmet — el regalo que sí dice algo.", "gallery_eyebrow": "Un vistazo", "gallery_title1": "La tienda", "gallery_title2": "en imágenes", "contact_eyebrow": "Reserva tu cata", "contact_title1": "Te esperamos", "contact_title2": "cuando quieras", "contact_p": "Aforo reducido, así que mejor avisar antes. Llama, escribe por WhatsApp o rellena el formulario.", "cta_call": "📞 Llamar ahora", "cta_whatsapp": "💬 Escribir por WhatsApp", "info_address_label": "Dirección", "info_directions": "Cómo llegar →", "info_phone_label": "Teléfono", "info_hours_label": "Horario", "day_mon": "Lunes", "day_tue": "Martes", "day_wed": "Miércoles", "day_thu": "Jueves", "day_fri": "Viernes", "day_sat": "Sábado", "day_sun": "Domingo", "closed": "Cerrado", "form_title": "Solicita tu reserva", "form_note": "Esto es una solicitud de reserva: la confirmaremos por email o teléfono a la mayor brevedad posible. Si prefieres respuesta inmediata, mejor llama o escribe por WhatsApp.", "tab_reserve": "Reservar cata", "tab_order": "Pedido de tienda", "order_title": "Solicita tu pedido", "order_note": "Esto es una solicitud de pedido: te confirmaremos disponibilidad y forma de entrega por email o teléfono a la mayor brevedad posible.", "mc_title": "Otros contactos", "mc_service": "Atención al cliente:", "mc_business": "Empresas y proveedores:", "mc_privacy": "Protección de datos:", "footer_legal": "Aviso legal", "footer_privacy": "Política de privacidad", "footer_cookies": "Política de cookies", "legal_modal_title": "Información legal", "aviso_p1": "En cumplimiento del deber de información del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), se informa de que el titular de este sitio web es Jonathan Álvarez Abreu, NIF 54047787H, con domicilio en Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife.", "aviso_p2": "El Capricho de Costa del Silencio no asume responsabilidad derivada de la falta de veracidad, integridad, actualización o precisión de los datos e informaciones contenidos en estas páginas.", "aviso_p3": "Los textos, imágenes, logotipo y demás contenidos de este sitio son propiedad de El Capricho de Costa del Silencio o de sus licenciantes. Queda prohibida su reproducción, distribución o comunicación pública sin consentimiento expreso.", "aviso_p4": "Para acceder a algunos servicios (reserva de catas, pedidos de tienda) deberás facilitar datos personales, tratados conforme al Reglamento (UE) 2016/679 (RGPD). Puedes ejercer tus derechos escribiendo a protecciondedatos@elcaprichodecostadelsilencio.com o en la dirección indicada arriba.", "priv_h1": "Protección de datos según el RGPD", "priv_p1": "Los datos personales que recogemos a través de los formularios de este sitio web (reserva de cata y pedidos de tienda) se incorporan a los ficheros de Jonathan Álvarez Abreu, responsable de El Capricho de Costa del Silencio.", "priv_h2": "¿Con qué finalidad tratamos tus datos?", "priv_l1": "Gestionar tu reserva de cata o degustación.", "priv_l2": "Gestionar tu pedido de productos de la tienda.", "priv_l3": "Responder a tus consultas de atención al cliente.", "priv_l4": "Enviarte información comercial, solo si nos has dado tu consentimiento expreso.", "priv_h3": "¿Por cuánto tiempo los conservamos?", "priv_p2": "Mientras exista una relación comercial contigo o hasta que solicites su supresión, y durante el plazo en que pudieran derivarse responsabilidades legales.", "priv_h4": "Legitimación y destinatarios", "priv_p3": "El tratamiento se basa en tu solicitud de información o reserva, y en tu consentimiento expreso cuando corresponda. Tus datos no se ceden a terceros ajenos a El Capricho de Costa del Silencio, salvo obligación legal.", "priv_h5": "Tus derechos", "priv_p4": "Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, cancelación, oposición, limitación y portabilidad escribiendo a protecciondedatos@elcaprichodecostadelsilencio.com o en Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife. También puedes oponerte al envío de comunicaciones comerciales en cualquier momento, por el mismo medio.", "priv_h6": "Propiedad intelectual", "priv_p5": "Todos los contenidos de este sitio (textos, imágenes, logotipo) son propiedad de El Capricho de Costa del Silencio o de sus licenciantes y están protegidos por la normativa de propiedad intelectual. Queda prohibido su uso no autorizado.", "cook_h1": "¿Qué son las cookies?", "cook_p1": "Las cookies son archivos que se descargan en tu equipo al visitar una página web y permiten almacenar y recuperar información sobre tus hábitos de navegación.", "cook_h2": "Cookies que utilizamos", "cook_p2": "Este sitio usa cookies técnicas necesarias para su funcionamiento (por ejemplo, para recordar tu idioma preferido) y puede cargar contenido de terceros, como el mapa de Google Maps incrustado, que puede instalar sus propias cookies conforme a la política de privacidad de Google.", "cook_h3": "Tipos de cookies", "cook_l1": "Cookies propias: gestionadas directamente por El Capricho de Costa del Silencio (p. ej., para recordar tu idioma).", "cook_l2": "Cookies de terceros: instaladas por servicios externos incrustados en la web (p. ej., Google Maps).", "cook_l3": "Cookies técnicas: necesarias para la navegación y el funcionamiento básico del sitio.", "cook_l4": "Cookies de personalización: recuerdan tus preferencias, como el idioma.", "cook_h4": "Cómo gestionar las cookies", "cook_p3": "Puedes permitir, bloquear o eliminar las cookies desde la configuración de tu navegador (Chrome, Firefox, Safari, Edge, Opera). Bloquear algunas cookies puede afectar al funcionamiento del sitio.", "cook_h5": "Consentimiento", "cook_p4": "Al continuar navegando por El Capricho de Costa del Silencio, aceptas el uso de estas cookies según lo descrito en esta política. Puedes cambiar tu decisión en cualquier momento eliminando las cookies desde tu navegador.", "nav_carta": "Carta", "carta_title": "Nuestra carta", "carta_loading": "Cargando la carta…", "carta_error": "No se pudo cargar la carta en este momento. Inténtalo de nuevo más tarde."}, "en": {"nav_home": "Home", "nav_about": "About", "nav_selection": "Selection", "nav_gallery": "Gallery", "nav_contact": "Contact", "nav_book": "Book your tasting", "hero_tag": "🍷 Gourmet · Tastings · Shop", "hero_title1": "Ham like this doesn't rush", "hero_title2": "The taste of the authentic", "hero_p": "Real Ibérico curing, cheeses, preserves and carefully chosen wines — a place made for tasting slowly, not rushing through.", "hero_btn2": "View selection", "hero_scroll": "Scroll", "badge_pet": "🐾 Pet friendly", "badge_wifi": "📶 Free wifi", "badge_aforo": "🪑 Limited seating", "intro_eyebrow": "We're not a restaurant", "intro_title1": "A shop", "intro_title2": "for curious palates", "intro_p1": "El Capricho de Costa del Silencio is a gourmet shop with tastings: Ibérico ham, cheeses from around the world, preserves and wines chosen with care and criteria.", "intro_p2": "Limited seating and reservations required, so every table gets the time and attention it deserves.", "intro_point1": "Guided tastings", "intro_point2": "A curated selection of Ibérico product", "intro_point3": "Pet friendly and free wifi", "intro_point4": "Book in a couple of minutes", "intro_months": "months of real curing", "sel_eyebrow": "Our selection", "sel_title1": "To taste", "sel_title2": "and to take home", "sel1_title": "Ibérico Ham", "sel1_p": "36 months of curing, 50% Ibérico breed. Sliced fresh, by the piece or on a board to share.", "sel2_title": "Cheeses of the World", "sel2_p": "From creamy to bold — a selection for every palate, Canarian product included.", "sel3_title": "Galician Preserves", "sel3_p": "Cockles, scallops and razor clams — the sea, straight from the Rías Baixas.", "sel4_title": "Wine and Oil", "sel4_p": "Ribera, Rioja and Canarian wines, alongside olive oils from the sierra to pair without rushing.", "sel5_title": "Vermouth and Aperitivo", "sel5_p": "The classic Spanish aperitivo, done right, with a few olives and good company.", "sel6_title": "Chocolates and Gifts", "sel6_p": "Belgian chocolate, Canarian sweets and gourmet treats — the gift that actually says something.", "gallery_eyebrow": "A glimpse", "gallery_title1": "The shop", "gallery_title2": "in pictures", "contact_eyebrow": "Book your tasting", "contact_title1": "We're waiting", "contact_title2": "whenever you like", "contact_p": "Seating is limited, so it's best to let us know in advance. Call, message us on WhatsApp, or fill in the form.", "cta_call": "📞 Call now", "cta_whatsapp": "💬 Message on WhatsApp", "info_address_label": "Address", "info_directions": "Get directions →", "info_phone_label": "Phone", "info_hours_label": "Opening hours", "day_mon": "Monday", "day_tue": "Tuesday", "day_wed": "Wednesday", "day_thu": "Thursday", "day_fri": "Friday", "day_sat": "Saturday", "day_sun": "Sunday", "closed": "Closed", "form_title": "Request your reservation", "form_note": "This is a reservation request: we will confirm it by email or phone as soon as possible. For an immediate reply, it's best to call or message on WhatsApp.", "tab_reserve": "Book a tasting", "tab_order": "Shop order", "order_title": "Request your order", "order_note": "This is an order request: we will confirm availability and delivery by email or phone as soon as possible.", "mc_title": "Other contacts", "mc_service": "Customer care:", "mc_business": "Business and suppliers:", "mc_privacy": "Data protection:", "footer_legal": "Legal notice", "footer_privacy": "Privacy policy", "footer_cookies": "Cookie policy", "legal_modal_title": "Legal information", "aviso_p1": "In compliance with the duty of information under Article 10 of Spanish Law 34/2002 on Information Society and E-commerce Services (LSSICE), this website is owned by Jonathan Álvarez Abreu, Tax ID (NIF) 54047787H, address at Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife, Spain.", "aviso_p2": "El Capricho de Costa del Silencio accepts no liability arising from a lack of accuracy, completeness, timeliness or precision of the data or information contained on these pages.", "aviso_p3": "The text, images, logo and other content on this site are the property of El Capricho de Costa del Silencio or its licensors. Reproduction, distribution or public communication without express consent is prohibited.", "aviso_p4": "To access certain services (tasting reservations, shop orders) you will need to provide personal data, processed in accordance with Regulation (EU) 2016/679 (GDPR). You can exercise your rights by writing to protecciondedatos@elcaprichodecostadelsilencio.com or at the address above.", "priv_h1": "Data protection under the GDPR", "priv_p1": "Personal data collected through this website's forms (tasting reservations and shop orders) is included in the files of Jonathan Álvarez Abreu, the party responsible for El Capricho de Costa del Silencio.", "priv_h2": "What do we use your data for?", "priv_l1": "Managing your tasting or degustation reservation.", "priv_l2": "Managing your shop order.", "priv_l3": "Responding to your customer service enquiries.", "priv_l4": "Sending you commercial information, only if you have given your express consent.", "priv_h3": "How long do we keep it?", "priv_p2": "For as long as our business relationship continues or until you request its deletion, and for the period during which legal liabilities could arise.", "priv_h4": "Legal basis and recipients", "priv_p3": "Processing is based on your request for information or booking, and on your express consent where applicable. Your data is not shared with third parties outside El Capricho de Costa del Silencio, except where legally required.", "priv_h5": "Your rights", "priv_p4": "You can exercise your rights of access, rectification, erasure, objection, restriction and portability at any time by writing to protecciondedatos@elcaprichodecostadelsilencio.com or at Av. José Antonio Tavío, C.C. Chaparral, 38630, Santa Cruz de Tenerife, Spain. You can also object to receiving commercial communications at any time, through the same channel.", "priv_h6": "Intellectual property", "priv_p5": "All content on this site (text, images, logo) is the property of El Capricho de Costa del Silencio or its licensors and is protected under intellectual property law. Unauthorised use is prohibited.", "cook_h1": "What are cookies?", "cook_p1": "Cookies are files downloaded to your device when you visit a website, allowing information about your browsing habits to be stored and retrieved.", "cook_h2": "Cookies we use", "cook_p2": "This site uses technical cookies necessary for it to work (for example, to remember your preferred language) and may load third-party content, such as the embedded Google Maps, which may set its own cookies under Google's privacy policy.", "cook_h3": "Types of cookies", "cook_l1": "First-party cookies: managed directly by El Capricho de Costa del Silencio (e.g. to remember your language).", "cook_l2": "Third-party cookies: set by external services embedded on the site (e.g. Google Maps).", "cook_l3": "Technical cookies: necessary for browsing and the site's basic operation.", "cook_l4": "Personalisation cookies: remember your preferences, such as language.", "cook_h4": "Managing cookies", "cook_p3": "You can allow, block or delete cookies through your browser settings (Chrome, Firefox, Safari, Edge, Opera). Blocking some cookies may affect how the site works.", "cook_h5": "Consent", "cook_p4": "By continuing to browse El Capricho de Costa del Silencio, you accept the use of these cookies as described in this policy. You can change your decision at any time by deleting cookies from your browser.", "nav_carta": "Menu", "carta_title": "Our menu", "carta_loading": "Loading the menu…", "carta_error": "The menu could not be loaded right now. Please try again later."}};
 
   let currentLang = localStorage.getItem('capricho_lang') || 'es';
 
@@ -1032,6 +926,7 @@
       mc.textContent = email;
     }
     if (typeof cartaData !== 'undefined' && cartaData) { renderCartaTabs(); renderCartaPanel(); }
+    document.dispatchEvent(new CustomEvent('capricho:language', {detail: lang}));
   }
 
   const langSwitch = document.getElementById('langSwitch');
@@ -1284,190 +1179,52 @@
     panelOrder.classList.add('active'); panelReserve.classList.remove('active');
   });
 
-  /* ================= FORMS ================= */
-  const EMAILJS_PUBLIC_KEY = 'o28N2eUt1lre5-BYe';
-  const EMAILJS_SERVICE_ID = 'service_kwj445a';
-  const EMAILJS_TEMPLATE_ID = 'template_8w4cgql';
-  if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  /* ================= FORMS (embedded from the CRM) ================= */
+  // One CRM form per language. The CRM can't report its height to this page, so each iframe
+  // gets the form's measured height for its width, plus room for the CRM's field-error messages.
+  const CRM_BASE = 'https://crmapi.retuertographicdesign.com/form/';
+  const CRM_FORMS = {
+    reserve: {
+      es: 'bf08680e-7dfa-3929-989b-b428df25baa2',
+      en: '9ef8e7eb-3c93-326a-968a-c1344412502d',
+      title: {es: 'Formulario de reserva de cata', en: 'Tasting reservation form'},
+      // [max iframe width in px, form height in px], measured per language; widths include
+      // ~15px of margin because label wrapping varies slightly between browsers
+      heights: {es: [[265, 837], [Infinity, 810]], en: [[270, 863], [350, 837], [Infinity, 810]]},
+    },
+    order: {
+      es: 'c92e1614-f6d5-3b02-bec5-16d021a49dc1',
+      en: '67a5fcaa-3473-353e-94d2-c3bf8ab04d4b',
+      title: {es: 'Formulario de pedido de tienda', en: 'Shop order form'},
+      heights: {es: [[265, 998], [Infinity, 971]], en: [[290, 998], [Infinity, 971]]},
+    },
+  };
+  const CRM_ERROR_ROOM = 90;
 
-  const RESERVE_EMAIL = {es:'reservas@elcaprichodecostadelsilencio.com', en:'bookings@elcaprichodecostadelsilencio.com'};
-  const ORDER_EMAIL = {es:'pedidos@elcaprichodecostadelsilencio.com', en:'orders@elcaprichodecostadelsilencio.com'};
-  const SHOP_PHONE_DISPLAY = '623 97 28 47';
-  const SHOP_TEL = 'tel:+34623972847';
-  const SHOP_WA = 'https://wa.me/34623972847';
-
-  function normalizeAnswer(str){
-    return str.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  }
-  function isCaptchaCorrect(str){
-    const n = normalizeAnswer(str);
-    return n.includes('jamon') || n.includes('ham');
-  }
-
-  function setFormStatus(el, state, html){
-    el.className = 'form-status show ' + state;
-    el.innerHTML = html;
-  }
-  function clearFormStatus(el){
-    el.className = 'form-status';
-    el.innerHTML = '';
-  }
-
-  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const PHONE_RE = /^[0-9]{6,15}$/;
-
-  function fieldError(input, message){
-    input.classList.add('invalid');
-    const err = document.getElementById(input.id + '_err');
-    if (err) { err.textContent = message; err.classList.add('show'); }
-  }
-  function clearFieldError(input){
-    input.classList.remove('invalid');
-    const err = document.getElementById(input.id + '_err');
-    if (err) { err.textContent = ''; err.classList.remove('show'); }
-  }
-  function validateFields(defs){
-    const t = I18N[currentLang] || I18N.es;
-    let firstInvalid = null;
-    defs.forEach(({ el, type }) => {
-      clearFieldError(el);
-      let msg = '';
-      if (!el.value.trim()) {
-        msg = t.err_required;
-      } else if (type === 'email' && !EMAIL_RE.test(el.value.trim())) {
-        msg = t.err_email;
-      } else if (type === 'phone' && !PHONE_RE.test(el.value.trim())) {
-        msg = t.err_phone;
-      }
-      if (msg) {
-        fieldError(el, msg);
-        if (!firstInvalid) firstInvalid = el;
-      }
-    });
-    if (firstInvalid) firstInvalid.focus();
-    return !firstInvalid;
-  }
-
-  function buildErrorStatusHTML(email){
-    const t = I18N[currentLang] || I18N.es;
-    return '<div>' + t.status_error_intro + '<br>'
-      + '📞 <a href="' + SHOP_TEL + '">' + t.status_error_call + ' (' + SHOP_PHONE_DISPLAY + ')</a><br>'
-      + '💬 <a href="' + SHOP_WA + '" target="_blank" rel="noopener">' + t.status_error_whatsapp + '</a><br>'
-      + '✉️ ' + t.status_error_email + ' <a href="mailto:' + email + '">' + email + '</a>'
-      + '</div>';
-  }
-
-  function wireForm(opts){
-    const form = document.getElementById(opts.formId);
-    const captchaInput = document.getElementById(opts.captchaId);
-    const captchaMsg = document.getElementById(opts.captchaMsgId);
-    const statusEl = document.getElementById(opts.statusId);
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const fieldDefs = opts.fields.map(f => ({ el: document.getElementById(f.id), type: f.type }));
-    fieldDefs.forEach(({ el }) => {
-      el.addEventListener('input', () => clearFieldError(el));
-    });
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      clearFormStatus(statusEl);
-      captchaMsg.classList.remove('show');
-
-      const fieldsOk = validateFields(fieldDefs);
-      const captchaOk = isCaptchaCorrect(captchaInput.value);
-      if (!captchaOk) captchaMsg.classList.add('show');
-      if (!fieldsOk || !captchaOk) {
-        if (fieldsOk) captchaInput.focus();
-        return;
-      }
-
-      const email = opts.emailMap[currentLang] || opts.emailMap.es;
-      const t = I18N[currentLang] || I18N.es;
-      const params = opts.buildParams(email);
-
-      setFormStatus(statusEl, 'sending', t.status_sending);
-      submitBtn.disabled = true;
-
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-        .then(() => {
-          submitBtn.disabled = false;
-          setFormStatus(statusEl, 'success', '✅ ' + t.status_success);
-          form.reset();
-        })
-        .catch(() => {
-          submitBtn.disabled = false;
-          setFormStatus(statusEl, 'error', buildErrorStatusHTML(email));
-        });
+  function sizeCrmFrames(){
+    document.querySelectorAll('.crm-frame').forEach(frame => {
+      const width = frame.offsetWidth;
+      if (!width) return;  // hidden tab; sized when shown
+      const steps = CRM_FORMS[frame.dataset.form].heights[frame.dataset.lang || 'es'];
+      const step = steps.find(([maxWidth]) => width <= maxWidth);
+      frame.style.height = (step[1] + CRM_ERROR_ROOM) + 'px';
     });
   }
-
-  wireForm({
-    formId: 'reserveForm', captchaId: 'r_captcha', captchaMsgId: 'r_captcha_msg', statusId: 'r_status',
-    emailMap: RESERVE_EMAIL,
-    fields: [
-      { id: 'r_name', type: 'text' },
-      { id: 'r_email', type: 'email' },
-      { id: 'r_phone', type: 'phone' },
-      { id: 'r_people', type: 'text' },
-      { id: 'r_date', type: 'text' },
-      { id: 'r_time', type: 'text' },
-    ],
-    buildParams: (toEmail) => {
-      const name = document.getElementById('r_name').value;
-      const userEmail = document.getElementById('r_email').value;
-      const phone = document.getElementById('r_phone').value;
-      const people = document.getElementById('r_people').value;
-      const date = document.getElementById('r_date').value;
-      const time = document.getElementById('r_time').value;
-      const message = document.getElementById('r_message').value;
-      const t = I18N[currentLang] || I18N.es;
-      return {
-        name: name,
-        to_email: toEmail,
-        email: userEmail,
-        subject: t.email_subject_reserve + ' - ' + name,
-        message:
-          t.email_subject_reserve + '\n\n' +
-          t.form_email + ': ' + userEmail + '\n' +
-          t.form_phone + ': ' + phone + '\n' +
-          t.form_people + ': ' + people + '\n' +
-          t.form_date + ': ' + date + '\n' +
-          t.form_time + ': ' + time + '\n' +
-          t.form_message + ': ' + (message || '-'),
-      };
-    }
-  });
-
-  wireForm({
-    formId: 'orderForm', captchaId: 'o_captcha', captchaMsgId: 'o_captcha_msg', statusId: 'o_status',
-    emailMap: ORDER_EMAIL,
-    fields: [
-      { id: 'o_name', type: 'text' },
-      { id: 'o_email', type: 'email' },
-      { id: 'o_phone', type: 'phone' },
-      { id: 'o_products', type: 'text' },
-    ],
-    buildParams: (toEmail) => {
-      const name = document.getElementById('o_name').value;
-      const userEmail = document.getElementById('o_email').value;
-      const phone = document.getElementById('o_phone').value;
-      const products = document.getElementById('o_products').value;
-      const message = document.getElementById('o_message').value;
-      const t = I18N[currentLang] || I18N.es;
-      return {
-        name: name,
-        to_email: toEmail,
-        email: userEmail,
-        subject: t.email_subject_order + ' - ' + name,
-        message:
-          t.email_subject_order + '\n\n' +
-          t.form_email + ': ' + userEmail + '\n' +
-          t.form_phone + ': ' + phone + '\n' +
-          t.order_products + ': ' + products + '\n' +
-          t.form_message + ': ' + (message || '-'),
-      };
-    }
-  });
+  function setCrmFormsLanguage(lang){
+    document.querySelectorAll('.crm-frame').forEach(frame => {
+      const form = CRM_FORMS[frame.dataset.form];
+      const formLang = form[lang] ? lang : 'es';
+      if (frame.dataset.lang === formLang && frame.src) return;
+      frame.dataset.lang = formLang;
+      frame.title = form.title[formLang];
+      frame.src = CRM_BASE + form[formLang];
+    });
+    sizeCrmFrames();
+  }
+  setCrmFormsLanguage(currentLang);
+  document.addEventListener('capricho:language', e => setCrmFormsLanguage(e.detail));
+  window.addEventListener('resize', sizeCrmFrames);
+  [tabReserve, tabOrder].forEach(tab => tab.addEventListener('click', sizeCrmFrames));
 </script>
 
 </body>
