@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-02T21:27:38.545Z",
+ "updatedAt": "2026-10-08T21:29:56.191Z",
  "sections": [
   {
    "name": "REFRESCOS Y AGUA",
@@ -258,14 +258,14 @@
     },
     {
      "name": "Carrilleras de Ternera Guisadas",
-     "price": 13.5,
+     "price": 15.5,
      "description": "",
      "status": "active",
      "sortOrder": 23
     },
     {
      "name": "Pimientos Rellenos de Bonito",
-     "price": 7.15,
+     "price": 8.4,
      "description": "",
      "status": "active",
      "sortOrder": 25
@@ -1051,7 +1051,7 @@
     },
     {
      "name": "Celta Gallego 100%",
-     "price": 455.4,
+     "price": 396.8,
      "description": "",
      "status": "active",
      "sortOrder": 6
