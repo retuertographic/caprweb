@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-12T09:35:07.187Z",
+ "updatedAt": "2026-10-14T21:41:06.712Z",
  "sections": [
   {
    "name": "REFRESCOS Y AGUA",
@@ -69,6 +69,28 @@
      "description": "",
      "status": "active",
      "sortOrder": 12
+    }
+   ]
+  },
+  {
+   "name": "LICORES",
+   "sortOrder": 0,
+   "disabled": false,
+   "isForAdmins": false,
+   "items": [
+    {
+     "name": "Zacapa",
+     "price": 12.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 1
+    },
+    {
+     "name": "Wiski buchanans deluxe",
+     "price": 12.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
     }
    ]
   },
@@ -590,6 +612,13 @@
      "description": "",
      "status": "active",
      "sortOrder": 4
+    },
+    {
+     "name": "Picos",
+     "price": 1.85,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
     }
    ]
   },
@@ -674,14 +703,14 @@
    "items": [
     {
      "name": "Cava perelada brut",
-     "price": 12.8,
+     "price": 13.5,
      "description": "",
      "status": "active",
      "sortOrder": 0
     },
     {
      "name": "Cava pedrelara brut rose",
-     "price": 11.42,
+     "price": 18.5,
      "description": "",
      "status": "active",
      "sortOrder": 0
@@ -1012,6 +1041,34 @@
      "description": "",
      "status": "active",
      "sortOrder": 6
+    },
+    {
+     "name": "Jamon estirpe negra cebo de campo",
+     "price": 258.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
+    },
+    {
+     "name": "Presa estirpe negra",
+     "price": 26.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
+    },
+    {
+     "name": "Caña de lomo estirpe negra",
+     "price": 78.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 9
+    },
+    {
+     "name": "Chorizo de bellota 100% 5 jotas",
+     "price": 26.1,
+     "description": "",
+     "status": "active",
+     "sortOrder": 10
     }
    ]
   },
@@ -1048,13 +1105,6 @@
      "description": "",
      "status": "active",
      "sortOrder": 4
-    },
-    {
-     "name": "Morcon iberico",
-     "price": 7.5,
-     "description": "",
-     "status": "active",
-     "sortOrder": 5
     },
     {
      "name": "Lomo iberico cebo",
