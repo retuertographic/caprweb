@@ -983,12 +983,9 @@
   document.addEventListener('click', (e) => { if (!langSwitch.contains(e.target)) langSwitch.classList.remove('open'); });
 
   /* ================= CARTA (live menu from Comandator) ================= */
-  // Comandator sections named "Carta - <section>" are shown, plus the ones listed in CARTA_EXTRA_SECTIONS;
-  // the rest are shop catalogue.
+  // Every active Comandator section is shown as-is (no name filtering or mapping).
   const CARTA_URL = 'https://comandator.com/trpc/establishmentsRouter.getEstablishmentBySlug?input=' +
     encodeURIComponent(JSON.stringify({slugName:'capricho-de-costa-del-silencio-tenerife-arona', language:'es'}));
-  const CARTA_PREFIX = /^\s*carta\s*-\s*/i;
-  const CARTA_EXTRA_SECTIONS = {'REFRESCOS Y AGUA': 'Refrescos y agua', 'VINO TINTO': 'Vino tinto'};
   const CATEGORY_EN = {
     'Productos Ibericos': 'Ibérico products',
     'Refrescos y agua': 'Soft drinks and water',
@@ -1009,6 +1006,17 @@
     'Vino por copas': 'Wine by the glass',
     'Vino blanco afrutado': 'Fruity white wine',
     'Vino blanco seco': 'Dry white wine',
+    'Aceites': 'Olive oils',
+    'Cavas y champam': 'Cava and champagne',
+    'Cervezas y sidras': 'Beers and ciders',
+    'Chocolates y bombones': 'Chocolates and bonbons',
+    'Jamones y embutidos por piezas': 'Ham and cured meats by the piece',
+    'Platos y raciones': 'Dishes and portions',
+    'Productos canarios': 'Canarian products',
+    'Smoothies y cafe': 'Smoothies and coffee',
+    'Vermu': 'Vermouth',
+    'Vino por copas y vermuts por copas': 'Wine and vermouth by the glass',
+    'Vinos blancos por botellas': 'White wine by the bottle',
   };
 
   // English names for menu items and descriptions, keyed by the Spanish text in Comandator
@@ -1176,13 +1184,18 @@
     return buildCarta((await fetchJson(CARTA_BACKUP_URL, 8000)).sections);
   }
 
+  // "VINOS BLANCOS   POR BOTELLAS" -> "Vinos blancos por botellas"
+  function sectionTitle(name){
+    const t = name.replace(/\s+/g, ' ').trim().toLowerCase();
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+
   function buildCarta(sections){
     return sections
-      .filter(sec => !sec.disabled && !sec.isForAdmins &&
-        (CARTA_PREFIX.test(sec.name) || CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()]))
+      .filter(sec => !sec.disabled && !sec.isForAdmins)
       .sort((a, b) => a.sortOrder - b.sortOrder)
       .map(sec => ({
-        category: CARTA_EXTRA_SECTIONS[sec.name.trim().toUpperCase()] || sec.name.replace(CARTA_PREFIX, '').trim(),
+        category: sectionTitle(sec.name),
         items: sec.items
           .filter(i => i.status === 'active')
           .sort((a, b) => a.sortOrder - b.sortOrder)

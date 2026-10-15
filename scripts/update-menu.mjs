@@ -30,11 +30,10 @@ const sections = menus.filter(m => !m.disabled).flatMap(m => m.sections || []).m
   })),
 }));
 
-const cartaItems = sections
-  .filter(s => /^\s*carta\s*-/i.test(s.name))
-  .flatMap(s => s.items)
-  .filter(i => typeof i.name === 'string' && typeof i.price === 'number');
-if (!cartaItems.length) throw new Error('Unexpected response: no "Carta - " sections with items');
+const allItems = sections
+.flatMap(s => s.items)
+.filter(i => typeof i.name === 'string' && typeof i.price === 'number');
+if (!allItems.length) throw new Error('Unexpected response: no sections with items');
 
 // Only rewrite the file when the menu itself changed, so the timestamp alone doesn't create commits.
 let previous = null;
@@ -43,5 +42,5 @@ if (previous && JSON.stringify(previous.sections) === JSON.stringify(sections)) 
   console.log('Menu unchanged.');
 } else {
   await writeFile(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), sections }, null, 1) + '\n');
-  console.log(`Menu saved: ${sections.length} sections, ${cartaItems.length} "Carta" items.`);
+  console.log(`Menu saved: ${sections.length} sections, ${allItems.length} items.`);
 }
