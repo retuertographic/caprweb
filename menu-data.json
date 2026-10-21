@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-16T18:47:08.258Z",
+ "updatedAt": "2026-10-21T21:43:40.835Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -66,25 +66,25 @@
      "sortOrder": 0
     },
     {
-     "name": "Cava pedrelara brut rose",
-     "price": 18.5,
-     "description": "",
-     "status": "active",
-     "sortOrder": 0
-    },
-    {
      "name": "Cava Gran Gesta Reserva Especial",
      "price": 14.95,
      "description": "",
      "status": "active",
-     "sortOrder": 0
+     "sortOrder": 1
+    },
+    {
+     "name": "Cava pedrelara brut rose",
+     "price": 18.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 2
     },
     {
      "name": "MOET CHANDON",
      "price": 65.8,
      "description": "",
      "status": "active",
-     "sortOrder": 4
+     "sortOrder": 3
     }
    ]
   },
