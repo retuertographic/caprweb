@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-21T21:43:40.835Z",
+ "updatedAt": "2026-10-22T23:59:08.443Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -170,84 +170,84 @@
      "price": 7,
      "description": "",
      "status": "active",
-     "sortOrder": 1
+     "sortOrder": 0
     },
     {
      "name": "042 Berberechos",
      "price": 12.75,
      "description": "",
      "status": "active",
-     "sortOrder": 2
+     "sortOrder": 1
     },
     {
      "name": "043 Boquerones del cantabrico",
      "price": 12.75,
      "description": "",
      "status": "active",
-     "sortOrder": 3
+     "sortOrder": 2
     },
     {
      "name": "044 Chipirones aove",
      "price": 10.42,
      "description": "",
      "status": "active",
-     "sortOrder": 4
+     "sortOrder": 3
     },
     {
      "name": "045 Chipirones en su tinta",
      "price": 11.5,
      "description": "",
      "status": "active",
-     "sortOrder": 5
+     "sortOrder": 4
     },
     {
      "name": "046 Navajas alnatural",
      "price": 11.5,
      "description": "",
      "status": "active",
-     "sortOrder": 6
+     "sortOrder": 5
     },
     {
      "name": "047 Zamburiñas en salsa gallega edición limitada",
      "price": 10.5,
      "description": "",
      "status": "active",
-     "sortOrder": 7
+     "sortOrder": 6
     },
     {
      "name": "048 Zamburiñas en salsa gallega",
      "price": 6.7,
      "description": "",
      "status": "active",
-     "sortOrder": 8
+     "sortOrder": 7
     },
     {
      "name": "049 Pulpo en aceite de oliva",
      "price": 8.5,
      "description": "",
      "status": "active",
-     "sortOrder": 9
+     "sortOrder": 8
     },
     {
      "name": "050 Berberechos rias baixas",
      "price": 16.5,
      "description": "",
      "status": "active",
-     "sortOrder": 10
+     "sortOrder": 9
     },
     {
      "name": "051 Ventresca",
      "price": 12.12,
      "description": "",
      "status": "active",
-     "sortOrder": 11
+     "sortOrder": 10
     },
     {
      "name": "052 Huevas de merluza",
      "price": 7.8,
      "description": "",
      "status": "active",
-     "sortOrder": 12
+     "sortOrder": 11
     }
    ]
   },
