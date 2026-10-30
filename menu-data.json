@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-22T23:59:08.443Z",
+ "updatedAt": "2026-10-30T09:59:21.440Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -96,7 +96,7 @@
    "items": [
     {
      "name": "Cerveza 1906 reserva 20cl",
-     "price": 1.5,
+     "price": 1.7,
      "description": "",
      "status": "active",
      "sortOrder": 0
@@ -351,74 +351,88 @@
    "isForAdmins": false,
    "items": [
     {
-     "name": "Presa media caña 5 jotas",
-     "price": 49.9,
+     "name": "Lote jamón caja navidad Sánchez Romero Carvajal",
+     "price": 522.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
+     "name": "Lote Paleta caja navidad Sánchez Romero Carvajal",
+     "price": 286.9,
      "description": "",
      "status": "active",
      "sortOrder": 1
     },
     {
-     "name": "Lomo media caña 5 jotas",
-     "price": 49.8,
+     "name": "Jamón Sánchez Romero Carvajal 100%",
+     "price": 498.5,
      "description": "",
      "status": "active",
      "sortOrder": 2
     },
     {
-     "name": "Jabuguitos",
-     "price": 5.6,
+     "name": "Celta Gallego 100%",
+     "price": 435.8,
      "description": "",
      "status": "active",
      "sortOrder": 3
     },
     {
-     "name": "Sanchez Romero Carvajal 100%",
-     "price": 585.6,
+     "name": "Jamon estirpe negra cebo de campo",
+     "price": 298.6,
      "description": "",
      "status": "active",
      "sortOrder": 4
-    },
-    {
-     "name": "Celta Gallego 100%",
-     "price": 396.8,
-     "description": "",
-     "status": "active",
-     "sortOrder": 5
     },
     {
      "name": "Servicio de corte y envasado al vacio",
      "price": 78.5,
      "description": "",
      "status": "active",
+     "sortOrder": 5
+    },
+    {
+     "name": "Presa media caña 5 jotas",
+     "price": 49.9,
+     "description": "",
+     "status": "active",
      "sortOrder": 6
     },
     {
-     "name": "Jamon estirpe negra cebo de campo",
-     "price": 258.6,
+     "name": "Lomo media caña 5 jotas",
+     "price": 49.8,
      "description": "",
      "status": "active",
      "sortOrder": 7
+    },
+    {
+     "name": "Jabuguitos",
+     "price": 5.6,
+     "description": "",
+     "status": "active",
+     "sortOrder": 8
     },
     {
      "name": "Presa estirpe negra",
      "price": 26.1,
      "description": "",
      "status": "active",
-     "sortOrder": 8
+     "sortOrder": 9
     },
     {
      "name": "Caña de lomo estirpe negra",
      "price": 78.5,
      "description": "",
      "status": "active",
-     "sortOrder": 9
+     "sortOrder": 10
     },
     {
      "name": "Chorizo de bellota 100% 5 jotas",
      "price": 26.1,
      "description": "",
      "status": "active",
-     "sortOrder": 10
+     "sortOrder": 11
     }
    ]
   },
@@ -495,7 +509,7 @@
    "items": [
     {
      "name": "1Racion  Jamón iberico100%",
-     "price": 22.5,
+     "price": 24.5,
      "description": "",
      "status": "active",
      "sortOrder": 0
@@ -509,7 +523,7 @@
     },
     {
      "name": "Ración  Jamón Ibérico cebo de campo",
-     "price": 12.8,
+     "price": 14.8,
      "description": "",
      "status": "active",
      "sortOrder": 2
@@ -557,14 +571,14 @@
      "sortOrder": 8
     },
     {
-     "name": "018 Tosta de ibericos",
+     "name": "Tosta de ibericos",
      "price": 1.89,
      "description": "",
      "status": "active",
      "sortOrder": 9
     },
     {
-     "name": "021 Tostada con Jamon",
+     "name": "Tostada con Jamón",
      "price": 2.9,
      "description": "",
      "status": "active",
