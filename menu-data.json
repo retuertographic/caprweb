@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T09:59:21.440Z",
+ "updatedAt": "2026-11-06T16:45:18.935Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -73,15 +73,15 @@
      "sortOrder": 1
     },
     {
-     "name": "Cava pedrelara brut rose",
-     "price": 18.5,
+     "name": "MOET CHANDON",
+     "price": 65.8,
      "description": "",
      "status": "active",
      "sortOrder": 2
     },
     {
-     "name": "MOET CHANDON",
-     "price": 65.8,
+     "name": "Cava pedrelara brut rose",
+     "price": 18.5,
      "description": "",
      "status": "active",
      "sortOrder": 3
@@ -351,88 +351,102 @@
    "isForAdmins": false,
    "items": [
     {
+     "name": "Pack jamon 5 jotas navidad",
+     "price": 659.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 0
+    },
+    {
      "name": "Lote jamón caja navidad Sánchez Romero Carvajal",
      "price": 522.5,
      "description": "",
      "status": "active",
-     "sortOrder": 0
+     "sortOrder": 1
     },
     {
      "name": "Lote Paleta caja navidad Sánchez Romero Carvajal",
      "price": 286.9,
      "description": "",
      "status": "active",
-     "sortOrder": 1
+     "sortOrder": 2
     },
     {
      "name": "Jamón Sánchez Romero Carvajal 100%",
      "price": 498.5,
      "description": "",
      "status": "active",
-     "sortOrder": 2
+     "sortOrder": 3
     },
     {
      "name": "Celta Gallego 100%",
      "price": 435.8,
      "description": "",
      "status": "active",
-     "sortOrder": 3
+     "sortOrder": 4
     },
     {
      "name": "Jamon estirpe negra cebo de campo",
      "price": 298.6,
      "description": "",
      "status": "active",
-     "sortOrder": 4
+     "sortOrder": 5
     },
     {
      "name": "Servicio de corte y envasado al vacio",
      "price": 78.5,
      "description": "",
      "status": "active",
-     "sortOrder": 5
+     "sortOrder": 6
     },
     {
      "name": "Presa media caña 5 jotas",
      "price": 49.9,
      "description": "",
      "status": "active",
-     "sortOrder": 6
+     "sortOrder": 7
     },
     {
      "name": "Lomo media caña 5 jotas",
      "price": 49.8,
      "description": "",
      "status": "active",
-     "sortOrder": 7
+     "sortOrder": 8
     },
     {
      "name": "Jabuguitos",
      "price": 5.6,
      "description": "",
      "status": "active",
-     "sortOrder": 8
+     "sortOrder": 9
     },
     {
      "name": "Presa estirpe negra",
      "price": 26.1,
      "description": "",
      "status": "active",
-     "sortOrder": 9
+     "sortOrder": 10
     },
     {
      "name": "Caña de lomo estirpe negra",
      "price": 78.5,
      "description": "",
      "status": "active",
-     "sortOrder": 10
+     "sortOrder": 11
     },
     {
      "name": "Chorizo de bellota 100% 5 jotas",
      "price": 26.1,
      "description": "",
      "status": "active",
-     "sortOrder": 11
+     "sortOrder": 12
+    },
+    {
+     "name": "Pack paleta 5 jotas navidad",
+     "price": 359.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 14
     }
    ]
   },
