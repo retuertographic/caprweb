@@ -1,0 +1,280 @@
+[
+  {
+    "slug": "pata-asada",
+    "date": "2026-11-04",
+    "image": "/img/novedades/pata-asada.webp",
+    "share": "/img/share/pata-asada.jpg",
+    "es": {
+      "title": "La pata asada, al corte y con pimentón",
+      "excerpt": "No es jamón ni pretende serlo. Es pata de cerdo asada, cortada fina en el momento y terminada con aceite y pimentón. Y tiene su público fijo.",
+      "description": "Pata asada cortada al momento con aceite y pimentón en El Capricho de Costa del Silencio, tienda gourmet en el sur de Tenerife.",
+      "alt": "Plato de pata asada cortada fina con pimentón por encima",
+      "body": [
+        {"p": "Cada vez que sale una ración de pata asada, alguien de la mesa de al lado pregunta qué es. Así que, para ahorrarnos la explicación, aquí va por escrito."},
+        {"h2": "Qué es (y qué no)"},
+        {"p": "Es pata de cerdo asada entera, despacio, hasta que la carne queda jugosa por dentro y la piel se dora. No es jamón, no es fiambre de bandeja y no viene en sobre. Se corta fina cuando la pides, nunca antes, porque cortada con antelación se seca y pierde la gracia."},
+        {"img": "/img/novedades/pata-asada-2.webp", "alt": "Lonchas de pata asada con pimentón sobre pizarra negra"},
+        {"h2": "Cómo la servimos"},
+        {"p": "Lonchas finas, un hilo de aceite y pimentón por encima. Nada de salsas que tapen la carne: si la pata es buena, no necesita esconderse. Puedes pedirla en ración o en media ración."},
+        {"destacado": "Si nunca la has probado, pide media ración junto al jamón. La comparación explica más que cualquier carta."}
+      ]
+    },
+    "en": {
+      "title": "Roast pork leg, sliced to order with paprika",
+      "excerpt": "It isn't jamón and doesn't try to be. It's roast pork leg, sliced thin on the spot and finished with olive oil and paprika. And it has its regulars.",
+      "description": "Roast pork leg sliced to order with olive oil and paprika at El Capricho de Costa del Silencio, a gourmet shop in the south of Tenerife.",
+      "alt": "Plate of thinly sliced roast pork leg topped with paprika",
+      "body": [
+        {"p": "Every time a plate of pata asada goes out, someone at the next table asks what it is. So, to save ourselves the explanation, here it is in writing."},
+        {"h2": "What it is (and isn't)"},
+        {"p": "It's a whole pork leg, roasted slowly until the meat stays juicy inside and the skin turns golden. It isn't jamón, it isn't tray cold cuts and it doesn't come in a packet. We slice it thin when you order it, never before, because pre-cut it dries out and loses the point."},
+        {"img": "/img/novedades/pata-asada-2.webp", "alt": "Slices of roast pork leg with paprika on a black slate"},
+        {"h2": "How we serve it"},
+        {"p": "Thin slices, a drizzle of olive oil and paprika on top. No sauces covering the meat: if the leg is good, it has nothing to hide. Order a full or a half portion."},
+        {"destacado": "Never tried it? Order a half portion next to the jamón. The comparison says more than any menu could."}
+      ]
+    }
+  },
+  {
+    "slug": "platos-con-conservas",
+    "date": "2026-10-28",
+    "image": "/img/novedades/platos-con-conservas.webp",
+    "share": "/img/share/platos-con-conservas.jpg",
+    "es": {
+      "title": "Cocina de lata (y a mucha honra)",
+      "excerpt": "Carrilleras, fabada, bonito a la sidra. Platos de cuchara que llegan en conserva y no tienen nada que envidiar a muchas cocinas. Te contamos por qué.",
+      "description": "Platos elaborados con conservas de calidad en El Capricho de Costa del Silencio: carrilleras de ternera, fabada asturiana, bonito a la sidra y más.",
+      "alt": "Caja de carrilleras de ternera guisadas en conserva de la marca Arbeyal",
+      "body": [
+        {"p": "Decir «plato de conserva» en voz alta todavía provoca alguna ceja levantada. Hasta que llega a la mesa."},
+        {"h2": "La lata no es el atajo, es el método"},
+        {"p": "Una buena conserva es un guiso hecho con tiempo, cerrado en su punto y que no se toca hasta que se abre. Nadie lo recalienta tres veces ni lo «aligera» para que salga más barato. Lo que está en la lata es lo que se cocinó."},
+        {"h2": "Lo que tenemos ahora"},
+        {"p": "Carrilleras de ternera guisadas, fabada asturiana, bonito a la sidra, pimientos rellenos de bonito y arbejas. Platos de cuchara de los de siempre, servidos calientes y con pan para mojar, que aquí no se le niega a nadie."},
+        {"p": "Y si te gusta alguno, la mayoría se puede llevar a casa. Abrir la lata y calentar no cuenta como cocinar, pero nadie tiene por qué enterarse."},
+        {"destacado": "Pregunta qué plato de conserva tenemos esa noche. Cambia según lo que entra en la tienda."}
+      ]
+    },
+    "en": {
+      "title": "Tinned cooking (and proud of it)",
+      "excerpt": "Beef cheeks, fabada, bonito in cider. Spoon dishes that arrive preserved and have nothing to envy many kitchens. Here's why.",
+      "description": "Dishes made with quality Spanish preserves at El Capricho de Costa del Silencio: braised beef cheeks, Asturian fabada, bonito in cider and more.",
+      "alt": "Box of Arbeyal braised beef cheeks, a Spanish preserved dish",
+      "body": [
+        {"p": "Saying «tinned dish» out loud still raises the odd eyebrow. Until it reaches the table."},
+        {"h2": "The tin isn't the shortcut, it's the method"},
+        {"p": "A good preserve is a stew made with time, sealed at the right moment and left alone until it's opened. Nobody reheats it three times or «lightens» it to make it cheaper. What's in the tin is what was cooked."},
+        {"h2": "What we have right now"},
+        {"p": "Braised beef cheeks, Asturian fabada, bonito in cider, peppers stuffed with bonito and stewed peas. Classic spoon dishes, served hot with bread for dipping, which we never refuse anyone."},
+        {"p": "And if you like one, most of them can go home with you. Opening a tin and heating it doesn't count as cooking, but nobody needs to know."},
+        {"destacado": "Ask which preserved dish we have that night. It changes with what comes into the shop."}
+      ]
+    }
+  },
+  {
+    "slug": "cava",
+    "date": "2026-10-21",
+    "image": "/img/novedades/cava.webp",
+    "share": "/img/share/cava.jpg",
+    "es": {
+      "title": "Un cava para empezar, no para celebrar nada",
+      "excerpt": "El cava no necesita cumpleaños, ascensos ni bodas. Con una tabla de ibéricos delante ya tiene excusa suficiente.",
+      "description": "Cavas y espumosos para acompañar ibéricos y quesos en El Capricho de Costa del Silencio, tienda gourmet con catas en Tenerife.",
+      "alt": "Botella de cava en la mano junto a dos copas servidas",
+      "body": [
+        {"p": "Hay quien guarda el cava para Nochevieja y lo bebe tibio, en vaso de plástico y a las doce y un minuto. Nosotros preferimos otra cosa."},
+        {"h2": "Burbuja y grasa se llevan bien"},
+        {"p": "La acidez y la burbuja del cava limpian la boca después de una loncha de jamón o de un queso curado, y dejan sitio para la siguiente. Por eso funciona tan bien al principio, con la tabla todavía entera."},
+        {"h2": "Qué hay en la estantería"},
+        {"p": "Tenemos cava brut, un reserva especial, un rosado y, para quien sí tenga algo que celebrar, champán. Se abre en mesa o se lleva a casa, y si no sabes cuál elegir, pregunta: te diremos cuál va con lo que vas a pedir."},
+        {"destacado": "Brindar es opcional. Pedir la tabla de ibéricos al lado, no tanto."}
+      ]
+    },
+    "en": {
+      "title": "Cava to start with, not to celebrate anything",
+      "excerpt": "Cava doesn't need birthdays, promotions or weddings. A board of ibéricos on the table is excuse enough.",
+      "description": "Cava and sparkling wines to go with Ibérico ham and cheese at El Capricho de Costa del Silencio, a gourmet shop with tastings in Tenerife.",
+      "alt": "Hand holding a bottle of cava next to two filled glasses",
+      "body": [
+        {"p": "Some people save cava for New Year's Eve and drink it lukewarm, from a plastic cup, at one minute past midnight. We'd rather not."},
+        {"h2": "Bubbles and fat get along"},
+        {"p": "Cava's acidity and bubbles clean the palate after a slice of jamón or a cured cheese, and make room for the next one. That's why it works so well at the start, with the board still full."},
+        {"h2": "What's on the shelf"},
+        {"p": "We have a brut cava, a special reserve, a rosé and, for those who really do have something to celebrate, champagne. Open it at the table or take it home, and if you can't decide, ask: we'll tell you which one goes with what you're ordering."},
+        {"destacado": "Toasting is optional. Ordering the ibéricos board alongside, less so."}
+      ]
+    }
+  },
+  {
+    "slug": "volvemos-a-abrir",
+    "date": "2026-10-14",
+    "image": "/img/novedades/volvemos-a-abrir.webp",
+    "share": "/img/share/volvemos-a-abrir.jpg",
+    "es": {
+      "title": "Volvemos a abrir: de miércoles a sábado",
+      "excerpt": "Subimos la persiana. De miércoles a sábado, de 18:00 a 22:30, con el jamón cortado cuando lo pides y ni un minuto antes.",
+      "description": "El Capricho de Costa del Silencio abre de miércoles a sábado de 18:00 a 22:30. Jamón ibérico al corte, catas y tienda gourmet en el C.C. Chaparral.",
+      "alt": "Plato de jamón ibérico cortado junto a tostas de pan y una copa de vino tinto",
+      "body": [
+        {"p": "Volvemos. Mismo sitio, misma calma y el mismo jamón, que no ha cambiado de opinión en todo este tiempo."},
+        {"h2": "El horario"},
+        {"p": "De miércoles a sábado, de 18:00 a 22:30. Domingo, lunes y martes la tienda descansa, y nosotros también."},
+        {"h2": "Lo de siempre"},
+        {"p": "Jamón cortado cuando lo pides, quesos, conservas y vino por copas. Aforo reducido, así que si venís varios o queréis una cata, mejor avisar antes por teléfono, WhatsApp o desde el formulario de la web."},
+        {"destacado": "Si lo tuyo es el sobre precortado, el súper sigue abierto. Si no, te esperamos desde las 18:00."}
+      ]
+    },
+    "en": {
+      "title": "We're open again: Wednesday to Saturday",
+      "excerpt": "The shutters are up. Wednesday to Saturday, 18:00 to 22:30, with the jamón cut when you order it and not a minute before.",
+      "description": "El Capricho de Costa del Silencio is open Wednesday to Saturday, 18:00 to 22:30. Ibérico ham cut to order, tastings and gourmet shop at C.C. Chaparral.",
+      "alt": "Plate of sliced Ibérico ham with bread toasts and a glass of red wine",
+      "body": [
+        {"p": "We're back. Same place, same calm and the same jamón, which hasn't changed its mind in all this time."},
+        {"h2": "Opening hours"},
+        {"p": "Wednesday to Saturday, 18:00 to 22:30. Sunday, Monday and Tuesday the shop rests, and so do we."},
+        {"h2": "The usual"},
+        {"p": "Jamón cut when you order it, cheeses, preserves and wine by the glass. Seating is limited, so if you're coming as a group or want a tasting, let us know in advance by phone, WhatsApp or the form on the website."},
+        {"destacado": "If pre-sliced packs are your thing, the supermarket's still open. If not, we'll see you from 18:00."}
+      ]
+    }
+  },
+  {
+    "slug": "jamon-presentado",
+    "date": "2026-10-07",
+    "image": "/img/novedades/jamon-presentado.webp",
+    "share": "/img/share/jamon-presentado.jpg",
+    "es": {
+      "title": "Aquí no ponemos jamón, lo presentamos",
+      "excerpt": "Un corazón, una rosa o un plato bien ordenado. No es postureo: un jamón bien colocado se come mejor, y se nota desde la primera loncha.",
+      "description": "Cómo presentamos el jamón ibérico en El Capricho de Costa del Silencio: cortado a mano, loncha a loncha, en tabla o emplatado.",
+      "alt": "Jamón ibérico colocado en forma de corazón sobre una mesa con quesos, aceitunas y vino",
+      "body": [
+        {"p": "Echar lonchas en un plato lo hace cualquiera. Colocarlas para que cada una se pueda coger sin arrastrar la de al lado ya es otra cosa."},
+        {"h2": "Por qué importa cómo llega a la mesa"},
+        {"p": "Una loncha amontonada se pega, se calienta con las demás y pierde la grasa que le da el sabor. Extendida, a temperatura y sin solaparse, se funde en la boca como tiene que fundirse. La presentación no es decoración: es parte del producto."},
+        {"img": "/img/novedades/jamon-presentado-2.webp", "alt": "Jamón ibérico emplatado en forma de rosa"},
+        {"h2": "El corazón, la rosa y el resto"},
+        {"p": "A veces sale en corazón, a veces en rosa y casi siempre en un plato ordenado sin más. Depende de la mesa, de la ocasión y de quien corte esa noche. Lo que no cambia es el producto: 36 meses de curación y cero prisa."},
+        {"destacado": "Si celebras algo, dínoslo al reservar. El jamón se pone de su parte."}
+      ]
+    },
+    "en": {
+      "title": "We don't just serve jamón, we present it",
+      "excerpt": "A heart, a rose or simply a neat plate. It isn't showing off: well-placed jamón eats better, and you can tell from the first slice.",
+      "description": "How we present Ibérico ham at El Capricho de Costa del Silencio: hand-cut, slice by slice, on a board or plated.",
+      "alt": "Ibérico ham arranged in a heart shape on a table with cheese, olives and wine",
+      "body": [
+        {"p": "Anyone can drop slices on a plate. Laying them out so each one comes away without dragging the next is something else."},
+        {"h2": "Why it matters how it reaches the table"},
+        {"p": "Piled-up slices stick together, warm each other up and lose the fat that carries the flavour. Spread out, at the right temperature and without overlapping, each one melts the way it should. Presentation isn't decoration: it's part of the product."},
+        {"img": "/img/novedades/jamon-presentado-2.webp", "alt": "Ibérico ham plated in the shape of a rose"},
+        {"h2": "The heart, the rose and the rest"},
+        {"p": "Sometimes it comes out as a heart, sometimes as a rose, and most of the time simply as a tidy plate. It depends on the table, the occasion and who's cutting that night. What doesn't change is the product: 36 months of curing and zero rush."},
+        {"destacado": "Celebrating something? Tell us when you book. The jamón will do its part."}
+      ]
+    }
+  },
+  {
+    "slug": "aceite-cazorla",
+    "date": "2026-09-30",
+    "image": "/img/novedades/aceite-cazorla.webp",
+    "share": "/img/share/aceite-cazorla.jpg",
+    "es": {
+      "title": "Pan, aceite de Cazorla y nada más",
+      "excerpt": "Es lo más sencillo de la carta y lo que más gente repite. Pan y un buen aceite de la sierra de Cazorla. No necesita más explicación, pero aquí va una.",
+      "description": "Aceite de oliva virgen extra de la sierra de Cazorla en El Capricho de Costa del Silencio: para tomar con pan en mesa o llevar a casa.",
+      "alt": "Botellas de aceite de oliva de la sierra de Cazorla en la tienda",
+      "body": [
+        {"p": "El pan con aceite es la prueba más honesta que hay: sin nada más en el plato, el aceite no tiene dónde esconderse."},
+        {"h2": "Por qué de Cazorla"},
+        {"p": "La sierra de Cazorla, en Jaén, da aceites de oliva con carácter: frutados, con su punto de amargor y ese picor al final que delata que el aceite está vivo. Es el que usamos en mesa y el que vendemos en la tienda, porque no tendría sentido servirte uno y venderte otro."},
+        {"h2": "En mesa o para casa"},
+        {"p": "Lo puedes probar con pan antes de cualquier tabla o llevártelo en botella de 500 ml, de 750 ml o en aceitera. Si después de probarlo vuelves al aceite de garrafa, no te juzgamos. Pero te vamos a echar de menos."},
+        {"destacado": "Pide el pan con aceite aunque no tengas hambre. Es la mejor manera de empezar a entender lo demás."}
+      ]
+    },
+    "en": {
+      "title": "Bread, Cazorla olive oil and nothing else",
+      "excerpt": "It's the simplest thing on the menu and the one people order again. Bread and good olive oil from the Sierra de Cazorla. It needs no explanation, but here's one anyway.",
+      "description": "Extra virgin olive oil from the Sierra de Cazorla at El Capricho de Costa del Silencio: with bread at the table or to take home.",
+      "alt": "Bottles of Sierra de Cazorla olive oil in the shop",
+      "body": [
+        {"p": "Bread and olive oil is the most honest test there is: with nothing else on the plate, the oil has nowhere to hide."},
+        {"h2": "Why Cazorla"},
+        {"p": "The Sierra de Cazorla, in Jaén, produces olive oils with character: fruity, a little bitter and with that peppery finish that tells you the oil is alive. It's the one we use at the table and the one we sell in the shop, because serving you one and selling you another would make no sense."},
+        {"h2": "At the table or at home"},
+        {"p": "Try it with bread before any board, or take it home in a 500 ml or 750 ml bottle, or a cruet. If after tasting it you go back to supermarket oil, we won't judge. But we'll miss you."},
+        {"destacado": "Order the bread and oil even if you're not hungry. It's the best way to start understanding everything else."}
+      ]
+    }
+  },
+  {
+    "slug": "productos-canarios",
+    "date": "2026-09-26",
+    "image": "/img/novedades/productos-canarios.webp",
+    "share": "/img/share/productos-canarios.jpg",
+    "es": {
+      "title": "Lo canario también se lleva en la maleta",
+      "excerpt": "Mojos, almogrote, mermelada de higo de La Gomera y galletas gomeras. Un imán dice que estuviste en Tenerife; esto demuestra que además prestaste atención.",
+      "description": "Productos canarios en El Capricho de Costa del Silencio: mojo picón, mojo verde, mojo palmero, almogrote, mermelada de higo de La Gomera y galletas gomeras.",
+      "alt": "Tarros de mojos y productos canarios en la estantería de la tienda",
+      "body": [
+        {"p": "No todo lo que vendemos viene de la península. Una parte de la estantería es de aquí, y es la que más acaba en las maletas."},
+        {"h2": "Los mojos"},
+        {"p": "Mojo picón para quien aguanta el picante, mojo suave para quien no, mojo verde de cilantro y mojo palmero, con almendras o casero. Si no sabes cuál elegir, hay un pack de tres con mojo rojo, almogrote y mojo de cilantro."},
+        {"h2": "Almogrote, higos y galletas"},
+        {"p": "El almogrote gomero, queso curado con pimiento y ajo para untar, merece su propio viaje. Al lado, mermelada de higo de La Gomera y galletas gomeras, que son la forma más rápida de que alguien en casa te perdone por no haberle traído nada más."},
+        {"destacado": "Consejo de la casa: lo de cristal, en la maleta grande. En la de mano, el control de seguridad se queda con tu mojo."}
+      ]
+    },
+    "en": {
+      "title": "Canarian flavours fit in a suitcase too",
+      "excerpt": "Mojo sauces, almogrote, fig jam from La Gomera and Gomeran biscuits. A magnet says you were in Tenerife; this proves you were paying attention.",
+      "description": "Canarian products at El Capricho de Costa del Silencio: mojo picón, green mojo, mojo palmero, almogrote, fig jam from La Gomera and Gomeran biscuits.",
+      "alt": "Jars of mojo sauces and Canarian products on the shop shelf",
+      "body": [
+        {"p": "Not everything we sell comes from mainland Spain. Part of the shelf is local, and it's the part that most often ends up in suitcases."},
+        {"h2": "The mojos"},
+        {"p": "Mojo picón for those who can handle the heat, mild mojo for those who can't, green coriander mojo and mojo palmero, with almonds or homemade. Can't decide? There's a pack of three with red mojo, almogrote and coriander mojo."},
+        {"h2": "Almogrote, figs and biscuits"},
+        {"p": "Almogrote from La Gomera, cured cheese spread with pepper and garlic, is worth a trip of its own. Next to it, fig jam from La Gomera and Gomeran biscuits, the quickest way to be forgiven by someone at home for not bringing anything else."},
+        {"destacado": "House tip: glass jars go in the hold luggage. In your carry-on, airport security keeps your mojo."}
+      ]
+    }
+  },
+  {
+    "slug": "ya-tenemos-web",
+    "date": "2026-09-25",
+    "image": "/img/novedades/ya-tenemos-web.webp",
+    "share": "/img/share/ya-tenemos-web.jpg",
+    "es": {
+      "title": "Ya tenemos web (y la carta, al día)",
+      "excerpt": "Estrenamos página para que no tengas que llamar solo para preguntar el horario. Carta con los precios al día, reservas de cata y todo lo que vayamos contando.",
+      "description": "Estrenamos la web de El Capricho de Costa del Silencio: carta con precios actualizados, reserva de catas, pedidos de tienda y novedades.",
+      "alt": "Cartas de El Capricho de Costa del Silencio sobre una mesa",
+      "body": [
+        {"p": "Durante mucho tiempo, la manera de saber qué teníamos era pasarse por la tienda. Sigue siendo la mejor, pero ahora hay otra."},
+        {"h2": "Qué vas a encontrar"},
+        {"p": "La carta, sincronizada con la tienda, así que si un precio cambia o un producto se acaba, lo verás aquí. El horario, cómo llegar y dos formularios: uno para reservar una cata y otro para hacernos un pedido de tienda. Todo en español y en inglés."},
+        {"h2": "Y esta sección"},
+        {"p": "Aquí iremos contando lo que entra nuevo en la estantería, lo que sale de la cocina de lata y cualquier cambio de horario. Sin boletines que nadie lee: entras cuando quieras y lo tienes."},
+        {"destacado": "La web no corta jamón. Para eso, de miércoles a sábado, de 18:00 a 22:30."}
+      ]
+    },
+    "en": {
+      "title": "We have a website (and an up-to-date menu)",
+      "excerpt": "We've launched a website so you don't have to call just to ask about opening hours. A menu with live prices, tasting bookings and everything we have to tell.",
+      "description": "El Capricho de Costa del Silencio launches its website: menu with live prices, tasting bookings, shop orders and news.",
+      "alt": "El Capricho de Costa del Silencio menus on a table",
+      "body": [
+        {"p": "For a long time, the only way to know what we had was to drop by the shop. It's still the best way, but now there's another."},
+        {"h2": "What you'll find"},
+        {"p": "The menu, synced with the shop, so if a price changes or something sells out, you'll see it here. Opening hours, directions and two forms: one to book a tasting and one to place a shop order. All in Spanish and English."},
+        {"h2": "And this section"},
+        {"p": "This is where we'll share what's new on the shelf, what comes out of the tinned kitchen and any change to our hours. No newsletters nobody reads: drop in whenever you like and it's here."},
+        {"destacado": "The website doesn't slice jamón. For that, Wednesday to Saturday, 18:00 to 22:30."}
+      ]
+    }
+  }
+]
