@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T19:25:11.724Z",
+ "updatedAt": "2026-11-11T21:56:45.591Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -1007,6 +1007,13 @@
      "sortOrder": 5
     },
     {
+     "name": "Pago de los cercados   - Tinto",
+     "price": 29.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
+    },
+    {
      "name": "Pago carraovejas",
      "price": 56.8,
      "description": "",
@@ -1055,6 +1062,13 @@
      "description": "",
      "status": "active",
      "sortOrder": 5
+    },
+    {
+     "name": "PAGO DE LOS CERCADOS - Blanco Afrutado",
+     "price": 25.8,
+     "description": "",
+     "status": "active",
+     "sortOrder": 6
     }
    ]
   }
