@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T21:56:45.591Z",
+ "updatedAt": "2026-11-12T23:38:09.128Z",
  "sections": [
   {
    "name": "ACEITES",
@@ -27,6 +27,20 @@
      "description": "",
      "status": "active",
      "sortOrder": 2
+    },
+    {
+     "name": "morcon",
+     "price": 7.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 4
+    },
+    {
+     "name": "queneca",
+     "price": 2.5,
+     "description": "",
+     "status": "active",
+     "sortOrder": 5
     }
    ]
   },
@@ -497,6 +511,13 @@
      "description": "",
      "status": "active",
      "sortOrder": 5
+    },
+    {
+     "name": "Mini sobres",
+     "price": 2.35,
+     "description": "",
+     "status": "active",
+     "sortOrder": 7
     }
    ]
   },
