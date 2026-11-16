@@ -21,6 +21,11 @@
           "p": "El protagonista fue el jamón Celta, de cerdo celta, la raza autóctona de Galicia, con el sello Galicia Calidade. Se cortó a cuchillo y al momento, loncha a loncha, delante de los invitados."
         },
         {
+          "video": "/media/novedades/celta-jamon-del-norte.mp4",
+          "poster": "/img/novedades/celta-jamon-del-norte-video.webp",
+          "alt": "Vídeo del jamón Celta, de cerdo celta con sello Galicia Calidade, cortado a cuchillo"
+        },
+        {
           "img": "/img/novedades/celta-corte.webp",
           "alt": "Cortando el jamón Celta a cuchillo delante de los invitados"
         },
@@ -33,11 +38,6 @@
         {
           "img": "/img/novedades/celta-triskel.webp",
           "alt": "Triskel celta dibujado con lonchas de jamón sobre una tabla blanca"
-        },
-        {
-          "video": "/media/novedades/celta-triskel.mp4",
-          "poster": "/img/novedades/celta-triskel-video.webp",
-          "alt": "Vídeo del triskel de jamón sobre la mesa"
         },
         {
           "h2": "La queimada y el conjuro"
@@ -84,6 +84,11 @@
           "p": "The star of the night was Celta ham, from the Celtic pig, the native breed of Galicia, carrying the Galicia Calidade seal. It was carved by hand on the spot, slice by slice, in front of our guests."
         },
         {
+          "video": "/media/novedades/celta-jamon-del-norte.mp4",
+          "poster": "/img/novedades/celta-jamon-del-norte-video.webp",
+          "alt": "Video of the Celta ham, from the Celtic pig with the Galicia Calidade seal, carved by hand"
+        },
+        {
           "img": "/img/novedades/celta-corte.webp",
           "alt": "Carving the Celta ham by hand in front of the guests"
         },
@@ -96,11 +101,6 @@
         {
           "img": "/img/novedades/celta-triskel.webp",
           "alt": "Celtic triskelion drawn with slices of ham on a white board"
-        },
-        {
-          "video": "/media/novedades/celta-triskel.mp4",
-          "poster": "/img/novedades/celta-triskel-video.webp",
-          "alt": "Video of the ham triskelion on the table"
         },
         {
           "h2": "The queimada and the spell"
