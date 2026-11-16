@@ -32,7 +32,7 @@ T = {
         'list_lead': 'Lo que entra nuevo en la estantería, lo que sale de la cocina de lata y cualquier cambio de horario. Contado sin prisa, como todo aquí.',
         'list_page_title': 'Novedades · ' + NAME,
         'list_description': 'Novedades de El Capricho de Costa del Silencio: productos nuevos, catas, horarios y lo que pasa en la tienda gourmet del C.C. Chaparral.',
-        'more': 'Leer más →', 'share': 'Compartir', 'copy': 'Copiar enlace', 'copied': 'Enlace copiado',
+        'tags': {'evento': 'Evento'}, 'more': 'Leer más →', 'share': 'Compartir', 'copy': 'Copiar enlace', 'copied': 'Enlace copiado',
         'all': 'Todas las novedades',
         'cta_title': '¿Te apetece probarlo?', 'cta_text': 'De miércoles a sábado, de 18:00 a 22:30. Aforo reducido: mejor reservar.',
         'legal': [('Aviso legal', 'aviso'), ('Política de privacidad', 'privacidad'), ('Política de cookies', 'cookies')],
@@ -47,7 +47,7 @@ T = {
         'list_lead': "What's new on the shelf, what comes out of the tinned kitchen and any change to our hours. Told without rushing, like everything here.",
         'list_page_title': 'News · ' + NAME,
         'list_description': "News from El Capricho de Costa del Silencio: new products, tastings, opening hours and what's happening at the gourmet shop in C.C. Chaparral.",
-        'more': 'Read more →', 'share': 'Share', 'copy': 'Copy link', 'copied': 'Link copied',
+        'tags': {'evento': 'Event'}, 'more': 'Read more →', 'share': 'Share', 'copy': 'Copy link', 'copied': 'Link copied',
         'all': 'All news',
         'cta_title': 'Fancy trying it?', 'cta_text': 'Wednesday to Saturday, 18:00 to 22:30. Limited seating: booking recommended.',
         'legal': [('Legal notice', 'aviso'), ('Privacy policy', 'privacidad'), ('Cookie policy', 'cookies')],
@@ -195,6 +195,11 @@ def breadcrumbs(lang, crumbs):
     }
 
 
+def tag_html(art, lang):
+    tag = art.get('tag')
+    return f'<span class="tag">{T[lang]["tags"][tag]}</span>' if tag else ''
+
+
 def render_block(block):
     if 'p' in block:
         return f'      <p>{block["p"]}</p>'
@@ -204,6 +209,10 @@ def render_block(block):
         return f'      <p class="post-destacado">{block["destacado"]}</p>'
     if 'img' in block:
         return (f'      <figure><img src="{block["img"]}" alt="{e(block["alt"])}" loading="lazy" decoding="async"></figure>')
+    if 'video' in block:
+        # muted autoplay loop (browsers only autoplay muted video); controls let visitors unmute
+        return (f'      <figure class="post-video"><video src="{block["video"]}" poster="{block["poster"]}" '
+                f'aria-label="{e(block["alt"])}" muted loop playsinline autoplay controls preload="metadata"></video></figure>')
     raise ValueError(f'Unknown block: {block}')
 
 
@@ -240,7 +249,7 @@ def article_page(lang, art, prev_art, next_art):
     <div class="wrap">
       <span class="eyebrow"><a href="{t["news"]}">{t["nav_news"]}</a></span>
       <h1>{e(c["title"])}</h1>
-      <div class="post-meta"><time datetime="{art["date"]}">{fmt_date(art["date"], lang)}</time></div>
+      <div class="post-meta">{tag_html(art, lang)}<time datetime="{art["date"]}">{fmt_date(art["date"], lang)}</time></div>
     </div>
   </section>
   <article class="post-body">
@@ -298,7 +307,7 @@ def list_page(lang, arts):
         cards.append(f'''      <a class="news-card" href="{t["post"].format(a["slug"])}">
         <div class="thumb"><img src="{a["image"]}" alt="{e(c["alt"])}" decoding="async"{lazy}></div>
         <div class="body">
-          <time datetime="{a["date"]}">{fmt_date(a["date"], lang)}</time>
+          <div class="card-meta">{tag_html(a, lang)}<time datetime="{a["date"]}">{fmt_date(a["date"], lang)}</time></div>
           <h2>{e(c["title"])}</h2>
           <p>{e(c["excerpt"])}</p>
           <span class="more">{t["more"]}</span>

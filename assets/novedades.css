@@ -91,6 +91,9 @@ ul{list-style:none;}
 .post-body h2{font-family:'Playfair Display',serif;font-size:1.55rem;margin:36px 0 14px;line-height:1.25;}
 .post-body figure{margin:30px 0;}
 .post-body figure img{border-radius:16px;width:100%;max-height:640px;object-fit:cover;}
+.post-video video{display:block;margin:0 auto;border-radius:16px;width:100%;max-width:420px;max-height:80vh;background:var(--ink);box-shadow:0 18px 40px rgba(20,25,43,.14);}
+.tag{display:inline-block;background:var(--gold);color:var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-right:10px;vertical-align:middle;}
+.card-meta{display:flex;align-items:center;flex-wrap:wrap;gap:4px;}
 .post-destacado{
   background:var(--cream);border-left:4px solid var(--gold);border-radius:0 14px 14px 0;
   padding:18px 22px;font-weight:600;color:var(--ink)!important;margin:30px 0!important;
