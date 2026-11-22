@@ -1,8 +1,7 @@
 [
   {
     "slug": "chocolates",
-    "date": "2026-12-30",
-    "draft": true,
+    "date": "2026-12-10",
     "image": "/img/novedades/chocolates.webp",
     "share": "/img/share/chocolates.jpg",
     "es": {
@@ -70,8 +69,7 @@
   },
   {
     "slug": "chorizo-flambeado",
-    "date": "2026-12-23",
-    "draft": true,
+    "date": "2027-02-12",
     "image": "/img/novedades/chorizo-flambeado.webp",
     "share": "/img/share/chorizo-flambeado.jpg",
     "es": {
@@ -139,8 +137,7 @@
   },
   {
     "slug": "vermu-y-vino",
-    "date": "2026-12-16",
-    "draft": true,
+    "date": "2026-12-26",
     "image": "/img/novedades/vermu-y-vino.webp",
     "share": "/img/share/vermu-y-vino.jpg",
     "es": {
@@ -218,8 +215,7 @@
   },
   {
     "slug": "quesos",
-    "date": "2026-12-09",
-    "draft": true,
+    "date": "2027-01-11",
     "image": "/img/novedades/quesos.webp",
     "share": "/img/share/quesos.jpg",
     "es": {
@@ -287,8 +283,7 @@
   },
   {
     "slug": "cestas-gourmet",
-    "date": "2026-12-02",
-    "draft": true,
+    "date": "2026-11-25",
     "image": "/img/novedades/cestas-gourmet.webp",
     "share": "/img/share/cestas-gourmet.jpg",
     "es": {
@@ -356,8 +351,7 @@
   },
   {
     "slug": "conservas-gallegas",
-    "date": "2026-11-25",
-    "draft": true,
+    "date": "2027-01-26",
     "image": "/img/novedades/conservas-gallegas.webp",
     "share": "/img/share/conservas-gallegas.jpg",
     "es": {

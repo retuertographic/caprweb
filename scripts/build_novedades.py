@@ -6,15 +6,18 @@ and sitemap.xml. To publish an article: add it to novedades.json (newest first o
 it is sorted by date), put its images under img/novedades/ and img/share/, run
 `python3 scripts/build_novedades.py` and commit the result.
 
-An article with "draft": true is left out of the site. To review drafts before publishing,
-build a preview copy elsewhere: `python3 scripts/build_novedades.py --preview /some/folder`.
+An article with "draft": true is left out of the site, and so is one dated in the future
+until its date (Canary time): .github/workflows/publish-news.yml rebuilds the site every
+morning to publish it. To review drafts and scheduled articles, build a preview copy
+elsewhere: `python3 scripts/build_novedades.py --preview /some/folder`.
 """
 import html
 import json
 import os
 import shutil
 import sys
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://elcaprichodecostadelsilencio.com'
@@ -385,10 +388,13 @@ def main():
         for f in ('index.html', 'favicon.ico', 'manifest.webmanifest', 'menu-data.json'):
             shutil.copy2(os.path.join(ROOT, f), os.path.join(OUT, f))
     else:
-        drafts = [a['slug'] for a in arts if a.get('draft')]
-        arts = [a for a in arts if not a.get('draft')]
-        if drafts:
-            print('Drafts left out: ' + ', '.join(drafts))
+        # drafts and articles dated in the future stay off the site; the publish-news
+        # workflow rebuilds every morning, so each one goes live on its date
+        today = datetime.now(ZoneInfo('Atlantic/Canary')).date().isoformat()
+        held = [a for a in arts if a.get('draft') or a['date'] > today]
+        arts = [a for a in arts if a not in held]
+        if held:
+            print('Held back: ' + ', '.join(f'{a["slug"]} ({"draft" if a.get("draft") else a["date"]})' for a in held))
     for lang in ('es', 'en'):
         write(T[lang]['news'], list_page(lang, arts))
         for i, art in enumerate(arts):

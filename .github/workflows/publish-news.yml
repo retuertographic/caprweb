@@ -1,0 +1,36 @@
+name: Publish scheduled news
+
+# Articles in scripts/novedades.json dated in the future stay off the site until their date.
+# This rebuilds the news pages every morning so each one goes live on its date.
+on:
+  schedule:
+    - cron: '7 6 * * *'   # 06:07 UTC = 06:07 in the Canaries in winter, 07:07 in summer
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-news
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/build_novedades.py
+      - name: Commit if an article was published
+        run: |
+          git add -A novedades.html novedades en sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish today."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish scheduled news"
+          git push
