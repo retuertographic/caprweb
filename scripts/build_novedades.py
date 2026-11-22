@@ -5,10 +5,15 @@ Writes novedades.html, novedades/<slug>.html, en/novedades.html, en/novedades/<s
 and sitemap.xml. To publish an article: add it to novedades.json (newest first or not,
 it is sorted by date), put its images under img/novedades/ and img/share/, run
 `python3 scripts/build_novedades.py` and commit the result.
+
+An article with "draft": true is left out of the site. To review drafts before publishing,
+build a preview copy elsewhere: `python3 scripts/build_novedades.py --preview /some/folder`.
 """
 import html
 import json
 import os
+import shutil
+import sys
 from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -358,16 +363,32 @@ def sitemap(arts):
             + '\n'.join(urls) + '\n</urlset>\n')
 
 
+OUT = ROOT  # where pages are written; --preview points it elsewhere
+
+
 def write(rel, content):
-    path = os.path.join(ROOT, rel.lstrip('/'))
+    path = os.path.join(OUT, rel.lstrip('/'))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
 
 
 def main():
+    global OUT
     with open(os.path.join(ROOT, 'scripts', 'novedades.json'), encoding='utf-8') as f:
         arts = sorted(json.load(f), key=lambda a: a['date'], reverse=True)
+    if '--preview' in sys.argv:
+        OUT = os.path.abspath(sys.argv[sys.argv.index('--preview') + 1])
+        # the preview needs the site's assets next to the pages
+        for d in ('assets', 'img', 'icons', 'media'):
+            shutil.copytree(os.path.join(ROOT, d), os.path.join(OUT, d), dirs_exist_ok=True)
+        for f in ('index.html', 'favicon.ico', 'manifest.webmanifest', 'menu-data.json'):
+            shutil.copy2(os.path.join(ROOT, f), os.path.join(OUT, f))
+    else:
+        drafts = [a['slug'] for a in arts if a.get('draft')]
+        arts = [a for a in arts if not a.get('draft')]
+        if drafts:
+            print('Drafts left out: ' + ', '.join(drafts))
     for lang in ('es', 'en'):
         write(T[lang]['news'], list_page(lang, arts))
         for i, art in enumerate(arts):

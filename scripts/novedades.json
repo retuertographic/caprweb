@@ -1,5 +1,451 @@
 [
   {
+    "slug": "chocolates",
+    "date": "2026-12-30",
+    "draft": true,
+    "image": "/img/novedades/chocolates.webp",
+    "share": "/img/share/chocolates.jpg",
+    "es": {
+      "title": "El regalo que no llega a casa",
+      "excerpt": "Bombones Pralibel, chocolate Velga Bliss, chocolates Lava Canarias y caramelos. Para regalar o regalarte, que tampoco hace falta excusa.",
+      "description": "Chocolates y bombones en El Capricho de Costa del Silencio: bombones Pralibel, chocolate Velga Bliss, chocolates Lava Canarias y caramelos.",
+      "alt": "Caja de bombones abierta mientras una mano coge uno",
+      "body": [
+        {
+          "p": "Las flores se marchitan en tres días. Una caja de bombones no sobrevive ni al camino de vuelta, y esa es precisamente la gracia."
+        },
+        {
+          "h2": "Lo que hay en la estantería"
+        },
+        {
+          "p": "Bombones Pralibel, chocolate belga Velga Bliss y chocolates Lava Canarias, hechos en las islas. Y caramelos, de los que se guardan en el bolso y desaparecen sin que nadie admita haberse comido el último."
+        },
+        {
+          "video": "/media/novedades/bombones.mp4",
+          "poster": "/img/novedades/bombones-video.webp",
+          "alt": "Vídeo de una caja de bombones: los únicos mensajes que se entienden sin traducir"
+        },
+        {
+          "h2": "Para regalar, o no"
+        },
+        {
+          "p": "Sirven como regalo, como final de una cata o como excusa para no salir de la tienda con las manos vacías. Y si estás preparando una cesta, van dentro sin discusión."
+        },
+        {
+          "destacado": "Regala uno. O regálatelo. Nadie tiene por qué enterarse."
+        }
+      ]
+    },
+    "en": {
+      "title": "The gift that never makes it home",
+      "excerpt": "Pralibel chocolates, Velga Bliss chocolate, Lava Canarias chocolates and sweets. To give or to keep, no excuse needed.",
+      "description": "Chocolates at El Capricho de Costa del Silencio: Pralibel chocolates, Velga Bliss chocolate, Lava Canarias chocolates and sweets.",
+      "alt": "Open box of chocolates with a hand picking one",
+      "body": [
+        {
+          "p": "Flowers wilt in three days. A box of chocolates won't even survive the trip home, and that's exactly the point."
+        },
+        {
+          "h2": "What's on the shelf"
+        },
+        {
+          "p": "Pralibel chocolates, Velga Bliss Belgian chocolate and Lava Canarias chocolates, made in the islands. And sweets, the kind that live in your bag and vanish without anyone admitting to the last one."
+        },
+        {
+          "video": "/media/novedades/bombones.mp4",
+          "poster": "/img/novedades/bombones-video.webp",
+          "alt": "Video of a box of chocolates: the only messages understood without translation"
+        },
+        {
+          "h2": "To give, or not"
+        },
+        {
+          "p": "They work as a gift, as the end of a tasting or as an excuse not to leave the shop empty-handed. And if you're putting a basket together, they go in, no question."
+        },
+        {
+          "destacado": "Give one away. Or keep it. Nobody needs to know."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "chorizo-flambeado",
+    "date": "2026-12-23",
+    "draft": true,
+    "image": "/img/novedades/chorizo-flambeado.webp",
+    "share": "/img/share/chorizo-flambeado.jpg",
+    "es": {
+      "title": "Chorizo flambeado en barro (cuando toca)",
+      "excerpt": "No está en la carta y no es un descuido. Hay platos que preparamos en ocasiones, cuando hay producto y ganas. Este es uno, y llega ardiendo a la mesa.",
+      "description": "Chorizo flambeado en cazuela de barro en El Capricho de Costa del Silencio: uno de los platos que preparamos en ocasiones y no siempre están en carta.",
+      "alt": "Chorizo flambeado ardiendo en una cazuela de barro",
+      "body": [
+        {
+          "p": "Si buscas el chorizo flambeado en la carta, no lo vas a encontrar. No es un despiste: es de esos platos que no salen todos los días."
+        },
+        {
+          "h2": "Platos que salen cuando toca"
+        },
+        {
+          "p": "Además de lo que está siempre en carta, de vez en cuando preparamos cosas que no están. Dependen del producto que entra, de la noche y de las ganas. Cuando salen, salen; cuando no, toca esperar a la próxima."
+        },
+        {
+          "h2": "Fuego en la mesa"
+        },
+        {
+          "p": "El chorizo llega en su cazuela de barro y se flambea delante de ti. Arde unos segundos, la piel se tuesta, la grasa se funde y el barro guarda el calor hasta el último trozo. No hace falta explicar mucho más: en cuanto sale una cazuela, la mesa de al lado pide otra."
+        },
+        {
+          "video": "/media/novedades/chorizo-flambeado.mp4",
+          "poster": "/img/novedades/chorizo-flambeado-video.webp",
+          "alt": "Vídeo del chorizo ardiendo en la cazuela de barro"
+        },
+        {
+          "destacado": "No siempre lo hay. Pregunta al llegar si esa noche toca chorizo flambeado o algún otro plato fuera de carta."
+        }
+      ]
+    },
+    "en": {
+      "title": "Flambéed chorizo in a clay dish (when it's on)",
+      "excerpt": "It's not on the menu, and that's no oversight. Some dishes we only make now and then, when the produce and the mood are right. This is one, and it arrives in flames.",
+      "description": "Chorizo flambéed in a clay dish at El Capricho de Costa del Silencio: one of the dishes we make now and then that aren't always on the menu.",
+      "alt": "Chorizo flambéed and burning in a clay dish",
+      "body": [
+        {
+          "p": "If you look for flambéed chorizo on the menu, you won't find it. That's no oversight: it's one of those dishes that doesn't come out every day."
+        },
+        {
+          "h2": "Dishes that come out when it's time"
+        },
+        {
+          "p": "Besides what's always on the menu, every now and then we make things that aren't. It depends on the produce that comes in, the night and the mood. When they're on, they're on; when they're not, you'll have to wait for next time."
+        },
+        {
+          "h2": "Fire at the table"
+        },
+        {
+          "p": "The chorizo arrives in its clay dish and is flambéed in front of you. It burns for a few seconds, the skin crisps, the fat melts and the clay keeps it hot to the last piece. Not much more to explain: as soon as one dish goes out, the next table orders another."
+        },
+        {
+          "video": "/media/novedades/chorizo-flambeado.mp4",
+          "poster": "/img/novedades/chorizo-flambeado-video.webp",
+          "alt": "Video of chorizo burning in the clay dish"
+        },
+        {
+          "destacado": "It's not always on. Ask when you arrive whether there's flambéed chorizo or another off-menu dish that night."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vermu-y-vino",
+    "date": "2026-12-16",
+    "draft": true,
+    "image": "/img/novedades/vermu-y-vino.webp",
+    "share": "/img/share/vermu-y-vino.jpg",
+    "es": {
+      "title": "El vermú no es de domingo",
+      "excerpt": "Es de cualquier día que merezca una pausa. Vermú blanco y rojo, y vino por copas: blanco afrutado canario, blanco seco, Rioja y Ribera.",
+      "description": "Vermú blanco y rojo y vino por copas en El Capricho de Costa del Silencio: blanco afrutado canario, blanco seco, tinto Rioja y tinto Ribera.",
+      "alt": "Aceitunas verdes en una cazuelita negra para acompañar el vermú",
+      "body": [
+        {
+          "p": "Alguien decidió un día que el vermú era cosa del domingo a mediodía. Nadie nos consultó, y no estamos de acuerdo."
+        },
+        {
+          "h2": "La pausa"
+        },
+        {
+          "p": "Tenemos vermú blanco y vermú rojo, por copa o por botella. Con unas aceitunas al lado, es la mejor manera de empezar la tarde un miércoles cualquiera."
+        },
+        {
+          "video": "/media/novedades/vermu.mp4",
+          "poster": "/img/novedades/vermu-video.webp",
+          "alt": "Vídeo de vermú servido con aceitunas"
+        },
+        {
+          "h2": "Y el vino, por copas"
+        },
+        {
+          "p": "No todos los días se abre una botella, pero todos los días se merece una copa. Por eso servimos por copas un blanco afrutado canario, un blanco seco, un tinto de Rioja y un tinto de Ribera. Elige la tuya, o deja que te digamos cuál va con lo que vas a pedir."
+        },
+        {
+          "video": "/media/novedades/vino-por-copas.mp4",
+          "poster": "/img/novedades/vino-por-copas-video.webp",
+          "alt": "Vídeo de vino por copas junto a una tabla de ibéricos"
+        },
+        {
+          "destacado": "Haz la pausa con nosotros: de miércoles a sábado, desde las 18:00."
+        }
+      ]
+    },
+    "en": {
+      "title": "Vermouth isn't just for Sundays",
+      "excerpt": "It's for any day that deserves a pause. White and red vermouth, and wine by the glass: fruity Canarian white, dry white, Rioja and Ribera.",
+      "description": "White and red vermouth and wine by the glass at El Capricho de Costa del Silencio: fruity Canarian white, dry white, Rioja red and Ribera red.",
+      "alt": "Green olives in a small black dish to go with vermouth",
+      "body": [
+        {
+          "p": "Someone once decided vermouth belonged to Sunday lunchtime. Nobody asked us, and we disagree."
+        },
+        {
+          "h2": "The pause"
+        },
+        {
+          "p": "We have white and red vermouth, by the glass or by the bottle. With a few olives alongside, it's the best way to start the evening on any old Wednesday."
+        },
+        {
+          "video": "/media/novedades/vermu.mp4",
+          "poster": "/img/novedades/vermu-video.webp",
+          "alt": "Video of vermouth served with olives"
+        },
+        {
+          "h2": "And wine, by the glass"
+        },
+        {
+          "p": "Not every day calls for a bottle, but every day deserves a glass. That's why we pour a fruity Canarian white, a dry white, a Rioja red and a Ribera red by the glass. Pick yours, or let us tell you which one goes with what you're ordering."
+        },
+        {
+          "video": "/media/novedades/vino-por-copas.mp4",
+          "poster": "/img/novedades/vino-por-copas-video.webp",
+          "alt": "Video of wine by the glass next to an Ibérico board"
+        },
+        {
+          "destacado": "Take your pause with us: Wednesday to Saturday, from 18:00."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "quesos",
+    "date": "2026-12-09",
+    "draft": true,
+    "image": "/img/novedades/quesos.webp",
+    "share": "/img/share/quesos.jpg",
+    "es": {
+      "title": "El queso no se mira",
+      "excerpt": "Se espera, se corta y se acompaña. Queso de mezcla de vaca, cabra y oveja, oveja premium y cabra semicurado, en mesa o en cuña para casa.",
+      "description": "Quesos en El Capricho de Costa del Silencio: queso de mezcla de vaca, cabra y oveja, queso de oveja premium y cabra semicurado, en ración o en cuña.",
+      "alt": "Cuñas de queso sobre pizarra junto a un plato de jamón ibérico",
+      "body": [
+        {
+          "p": "Un buen queso tiene algo en común con un buen jamón: no admite prisas. Ni al curarse ni al comerse."
+        },
+        {
+          "h2": "Los que tenemos"
+        },
+        {
+          "p": "Queso de mezcla de vaca, cabra y oveja, que se niega a elegir bando, y hace bien. Queso de oveja premium, curado el tiempo suficiente como para tener carácter propio. Y queso de cabra semicurado, para quien prefiere algo más suave sin renunciar a nada."
+        },
+        {
+          "video": "/media/novedades/quesos.mp4",
+          "poster": "/img/novedades/quesos-video.webp",
+          "alt": "Vídeo de quesos cortados y servidos con vino"
+        },
+        {
+          "h2": "En mesa o para casa"
+        },
+        {
+          "p": "En mesa, el queso de mezcla va en ración o en media ración, y el curado también sale en tostada. Para casa, cualquiera de ellos se lleva en cuña. Si no sabes cuál elegir, pide media ración primero: probar antes de decidir no es de cobardes, es de gente sensata."
+        },
+        {
+          "destacado": "Con una copa de vino al lado, el queso habla todavía mejor. Pregunta cuál le va."
+        }
+      ]
+    },
+    "en": {
+      "title": "Cheese isn't for looking at",
+      "excerpt": "It's waited for, cut and paired. Cow, goat and sheep blend, premium sheep's cheese and semi-cured goat's cheese, at the table or by the wedge.",
+      "description": "Cheese at El Capricho de Costa del Silencio: cow, goat and sheep blend, premium sheep's cheese and semi-cured goat's cheese, by the portion or the wedge.",
+      "alt": "Cheese wedges on slate next to a plate of Ibérico ham",
+      "body": [
+        {
+          "p": "A good cheese has something in common with a good jamón: it won't be rushed. Not while curing, and not while eating."
+        },
+        {
+          "h2": "What we have"
+        },
+        {
+          "p": "A blend of cow, goat and sheep's milk that refuses to pick a side, and rightly so. Premium sheep's cheese, cured long enough to have an opinion of its own. And semi-cured goat's cheese, for those who prefer something milder without giving anything up."
+        },
+        {
+          "video": "/media/novedades/quesos.mp4",
+          "poster": "/img/novedades/quesos-video.webp",
+          "alt": "Video of cheese being cut and served with wine"
+        },
+        {
+          "h2": "At the table or at home"
+        },
+        {
+          "p": "At the table, the blend comes as a full or half portion, and the cured cheese also comes on toast. To take home, any of them comes by the wedge. Can't decide? Order a half portion first: tasting before choosing isn't cowardice, it's common sense."
+        },
+        {
+          "destacado": "With a glass of wine alongside, cheese speaks even better. Ask which one suits it."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "cestas-gourmet",
+    "date": "2026-12-02",
+    "draft": true,
+    "image": "/img/novedades/cestas-gourmet.webp",
+    "share": "/img/share/cestas-gourmet.jpg",
+    "es": {
+      "title": "La cesta la montamos nosotros",
+      "excerpt": "Ibéricos, quesos, conservas, aceite de Cazorla, vino, cava, mojos y chocolate. Dinos para quién es y la preparamos con lo que tenemos en la estantería.",
+      "description": "Cestas gourmet para regalar en Navidad en El Capricho de Costa del Silencio: ibéricos, quesos, conservas, aceite, vino, cava, productos canarios y chocolate.",
+      "alt": "Botellas de vino, cava y aceite en la tienda, para preparar una cesta gourmet",
+      "body": [
+        {
+          "p": "Llegar con las manos vacías nunca fue una opción. Llegar con una cesta de supermercado con el celofán arrugado, tampoco debería serlo."
+        },
+        {
+          "h2": "Lo que puede llevar"
+        },
+        {
+          "p": "Todo lo que hay en nuestra estantería: jamón y embutidos ibéricos en sobre o por pieza, cuñas de queso, conservas de Cambados y Real Conservera, aceite de la sierra de Cazorla, vino blanco y tinto, cava, vermú, mojos y almogrote canarios, mermelada de higo de La Gomera y chocolates. No vendemos cualquier cosa, así que tampoco cabe cualquier cosa en la cesta."
+        },
+        {
+          "video": "/media/novedades/nuestra-mesa.mp4",
+          "poster": "/img/novedades/nuestra-mesa-video.webp",
+          "alt": "Vídeo de la tienda: no vendemos cualquier cosa, vendemos lo que nos gusta comer"
+        },
+        {
+          "h2": "Cómo pedirla"
+        },
+        {
+          "p": "Dinos para quién es, qué le gusta y cuánto quieres gastarte, y nosotros nos encargamos del resto. Puedes pasarte por la tienda, llamarnos o escribirnos por WhatsApp, o usar el formulario de pedido de la web."
+        },
+        {
+          "destacado": "En diciembre, mejor no dejarlo para el último día. La cesta se monta a mano, y las prisas no le sientan bien a nadie."
+        }
+      ]
+    },
+    "en": {
+      "title": "We'll put the basket together",
+      "excerpt": "Ibérico ham, cheese, preserves, Cazorla olive oil, wine, cava, mojo sauces and chocolate. Tell us who it's for and we'll build it from what's on our shelf.",
+      "description": "Gourmet Christmas gift baskets at El Capricho de Costa del Silencio: Ibérico ham, cheese, preserves, olive oil, wine, cava, Canarian products and chocolate.",
+      "alt": "Bottles of wine, cava and olive oil in the shop, ready for a gourmet basket",
+      "body": [
+        {
+          "p": "Turning up empty-handed was never an option. Turning up with a supermarket basket and crumpled cellophane shouldn't be one either."
+        },
+        {
+          "h2": "What can go in it"
+        },
+        {
+          "p": "Everything on our shelf: Ibérico ham and cured meats, sliced or by the piece, cheese wedges, preserves from Cambados and Real Conservera, Sierra de Cazorla olive oil, white and red wine, cava, vermouth, Canarian mojo sauces and almogrote, fig jam from La Gomera and chocolate. We don't sell just anything, so just anything doesn't go in the basket either."
+        },
+        {
+          "video": "/media/novedades/nuestra-mesa.mp4",
+          "poster": "/img/novedades/nuestra-mesa-video.webp",
+          "alt": "Video of the shop: we don't sell just anything, we sell what we like to eat"
+        },
+        {
+          "h2": "How to order"
+        },
+        {
+          "p": "Tell us who it's for, what they like and how much you want to spend, and we'll take care of the rest. Drop by the shop, call or message us on WhatsApp, or use the order form on the website."
+        },
+        {
+          "destacado": "In December, best not to leave it until the last day. Each basket is put together by hand, and rushing suits nobody."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "conservas-gallegas",
+    "date": "2026-11-25",
+    "draft": true,
+    "image": "/img/novedades/conservas-gallegas.webp",
+    "share": "/img/share/conservas-gallegas.jpg",
+    "es": {
+      "title": "El mar en lata, sin maquillaje",
+      "excerpt": "Zamburiñas, berberechos, ventresca, navajas. Conservas de Cambados y de Real Conservera que no necesitan cocina: abrir, al plato y pan.",
+      "description": "Conservas gallegas de Cambados y Real Conservera en El Capricho de Costa del Silencio: zamburiñas, berberechos, ventresca, navajas y anchoas.",
+      "alt": "Latas de conservas gallegas en la estantería de la tienda",
+      "body": [
+        {
+          "p": "Hay quien todavía piensa que una lata es lo que se abre cuando no queda nada en la nevera. Con estas, pasa al revés: se abren para que no haga falta nada más."
+        },
+        {
+          "h2": "Dos casas gallegas"
+        },
+        {
+          "p": "En la estantería tenemos conservas de Cambados y de Real Conservera. Berberechos de las Rías Baixas, navajas al natural, chipirones en su tinta o en aceite de oliva, pulpo en aceite, ventresca, mejillones en escabeche y sardinillas en aceite de oliva virgen extra. Y anchoas, en lata pequeña y en lata grande, para quien no se conforma."
+        },
+        {
+          "video": "/media/novedades/conservas-cambados.mp4",
+          "poster": "/img/novedades/conservas-cambados-video.webp",
+          "alt": "Vídeo de conservas de Cambados servidas en la mesa"
+        },
+        {
+          "h2": "Las zamburiñas, aparte"
+        },
+        {
+          "p": "Las zamburiñas en salsa gallega merecen párrafo propio, sobre todo la edición limitada. Limitada de verdad: cuando se acaban, se acaban, y no hay otra caja escondida en el almacén."
+        },
+        {
+          "video": "/media/novedades/zamburinas.mp4",
+          "poster": "/img/novedades/zamburinas-video.webp",
+          "alt": "Vídeo de zamburiñas en salsa gallega, edición limitada"
+        },
+        {
+          "h2": "Cómo se comen"
+        },
+        {
+          "p": "Se abre la lata, se sirve en el plato con su jugo y se acompaña de pan. No hay más secreto. Puedes tomarlas en mesa o llevártelas a casa, que aguantan el viaje mejor que cualquier táper."
+        },
+        {
+          "destacado": "El jugo de la lata no se tira. Para eso está el pan."
+        }
+      ]
+    },
+    "en": {
+      "title": "The sea in a tin, no make-up",
+      "excerpt": "Queen scallops, cockles, tuna belly, razor clams. Preserves from Cambados and Real Conservera that need no cooking: open, plate and bread.",
+      "description": "Galician preserves from Cambados and Real Conservera at El Capricho de Costa del Silencio: queen scallops, cockles, tuna belly, razor clams and anchovies.",
+      "alt": "Tins of Galician preserves on the shop shelf",
+      "body": [
+        {
+          "p": "Some people still think a tin is what you open when the fridge is empty. With these, it works the other way round: you open them so nothing else is needed."
+        },
+        {
+          "h2": "Two Galician houses"
+        },
+        {
+          "p": "On our shelf you'll find preserves from Cambados and Real Conservera. Cockles from the Rías Baixas, razor clams in brine, baby squid in their ink or in olive oil, octopus in olive oil, tuna belly, mussels in escabeche and small sardines in extra virgin olive oil. And anchovies, in a small tin and a large one, for those who won't settle."
+        },
+        {
+          "video": "/media/novedades/conservas-cambados.mp4",
+          "poster": "/img/novedades/conservas-cambados-video.webp",
+          "alt": "Video of Cambados preserves served at the table"
+        },
+        {
+          "h2": "The queen scallops, separately"
+        },
+        {
+          "p": "Queen scallops in Galician sauce deserve a paragraph of their own, especially the limited edition. Truly limited: when they're gone, they're gone, and there's no spare box hidden in the stockroom."
+        },
+        {
+          "video": "/media/novedades/zamburinas.mp4",
+          "poster": "/img/novedades/zamburinas-video.webp",
+          "alt": "Video of limited-edition queen scallops in Galician sauce"
+        },
+        {
+          "h2": "How to eat them"
+        },
+        {
+          "p": "Open the tin, serve it on a plate with its juices and add bread. That's the whole secret. Have them at the table or take them home; they travel better than any lunchbox."
+        },
+        {
+          "destacado": "Don't pour away the juice in the tin. That's what the bread is for."
+        }
+      ]
+    }
+  },
+  {
     "slug": "un-capricho-muy-celta",
     "date": "2026-11-16",
     "tag": "evento",
